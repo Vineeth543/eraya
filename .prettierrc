@@ -1,0 +1,17 @@
+{
+    "semi": true,
+    "useTabs": false,
+    "tabWidth": 4,
+    "endOfLine": "auto",
+    "proseWrap": "preserve",
+    "printWidth": 140,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "singleAttributePerLine": true,
+    "overrides": [
+        { "files": "*.html", "options": { "parser": "html" } },
+        { "files": "*.component.html", "options": { "parser": "angular" } }
+    ]
+}
