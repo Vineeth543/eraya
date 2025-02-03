@@ -4,7 +4,7 @@ import { ButtonComponent } from '../../shared/button/button.component';
 
 @Component({
     selector: 'app-home',
-    imports: [HeaderComponent, ButtonComponent],
+    imports: [ButtonComponent],
     templateUrl: './home.component.html',
     styleUrl: './home.component.less',
 })
