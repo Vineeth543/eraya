@@ -2,39 +2,39 @@
     <nav class="container mx-auto flex justify-between items-center">
         <span
             class="text-[#66B5AC] text-[40px] font-bold leading-[56px]"
-            routerLink="/home">
+            [routerLink]="'/home'">
             LOGO
         </span>
 
-        <ul class="flex items-center gap-4 text-white">
+        <ul class="flex items-center gap-4 text-white text-xl">
             <li
                 class="cursor-pointer"
-                routerLink="/home"
-                routerLinkActive="active">
+                [routerLink]="'/home'"
+                [routerLinkActive]="'active'">
                 Home
             </li>
             <li
                 class="cursor-pointer"
-                routerLink="/about"
-                routerLinkActive="active">
+                [routerLink]="'/about'"
+                [routerLinkActive]="'active'">
                 About
             </li>
             <li
                 class="cursor-pointer"
-                routerLink="/services"
-                routerLinkActive="active">
+                [routerLink]="'/services'"
+                [routerLinkActive]="'active'">
                 Services
             </li>
             <li
                 class="cursor-pointer"
-                routerLink="/projects"
-                routerLinkActive="active">
+                [routerLink]="'/projects'"
+                [routerLinkActive]="'active'">
                 Projects
             </li>
             <li
                 class="cursor-pointer"
-                routerLink="/contact"
-                routerLinkActive="active">
+                [routerLink]="'/contact'"
+                [routerLinkActive]="'active'">
                 Contact
             </li>
         </ul>
