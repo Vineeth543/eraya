@@ -1,15 +1,23 @@
-<div class="w-screen h-[calc(100vh-72px)] bg-[url('/images/hero.png')] bg-cover bg-center bg-no-repeat">
-    <div class="container mx-auto h-full flex justify-end items-center">
-        <div class="w-1/2 flex flex-col gap-5 px-12 py-16 rounded-3xl border border-white bg-[#4E4E4E] bg-opacity-80 text-white">
-            <span class="text-7xl font-extrabold"> Design Your Space For Living </span>
+<video
+    class="absolute -z-10 w-screen h-screen bg-cover bg-center bg-no-repeat object-cover"
+    loop
+    muted
+    autoplay>
+    <source
+        src="/videos/modern-living-room.mp4"
+        type="video/mp4" />
+</video>
 
-            <p class="text-2xl font-normal">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
-                dummy text ever since the.
-            </p>
+<div class="container mx-auto h-screen flex justify-end items-center">
+    <div class="w-1/2 flex flex-col gap-5 px-12 py-16 rounded-3xl border border-white bg-[#4E4E4E] bg-opacity-80 text-white">
+        <span class="text-7xl font-extrabold"> Design Your Space For Living </span>
 
-            <app-button text="Get Started"></app-button>
-        </div>
+        <p class="text-2xl font-normal">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            text ever since the.
+        </p>
+
+        <app-button [text]="'Get Started'"></app-button>
     </div>
 </div>
 
