@@ -1,0 +1,60 @@
+<div class="w-screen bg-black">
+    <div class="container mx-auto flex flex-col gap-5 py-16 text-white">
+        <div class="flex justify-between">
+            <div class="flex flex-col items-start gap-4">
+                <div class="w-36 flex items-center justify-center">
+                    <img
+                        src="/icons/logo-1.png"
+                        alt="logo"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <span class="w-64">Lorem Ipsum is simply dummy text of the printing and typesetting.</span>
+            </div>
+
+            <div class="flex flex-col items-start gap-4">
+                <span class="text-xl font-semibold">Services</span>
+                <span>Architecture</span>
+                <span>Iriterior design</span>
+                <span>Lighting installation</span>
+                <span>Floor Planning</span>
+            </div>
+
+            <div class="flex flex-col items-start gap-4">
+                <span class="text-xl font-semibold">About Us</span>
+                <span>Our Team</span>
+                <span>Testimonials</span>
+                <span>Contact</span>
+            </div>
+
+            <div class="flex flex-col items-start gap-4">
+                <span class="text-xl font-semibold">Recent Works</span>
+
+                <div class="w-56 flex flex-wrap gap-4">
+                    <div
+                        *ngFor="let image of recentWorkImages"
+                        class="w-16 h-16 flex items-center justify-center cursor-pointer rounded-md overflow-hidden">
+                        <img
+                            src="{{ image }}"
+                            alt="recent-work"
+                            class="w-full h-full object-cover hover:scale-150 transition-all duration-300" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-[1px] bg-[#C4C4C4]"></div>
+
+        <div class="flex items-center justify-center gap-4">
+            <p>
+                &copy; Copyright {{ '@ ' + currentYear }} UI8 LLC. All rights reserved. Developed by
+                <a
+                    href="https://www.linkedin.com/in/vineeth-serigar/"
+                    target="_blank"
+                    class="text-blue-500">
+                    Vineeth Serigar
+                </a>
+            </p>
+        </div>
+    </div>
+</div>
