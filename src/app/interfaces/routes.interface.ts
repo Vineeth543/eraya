@@ -6,3 +6,10 @@ export interface Routes {
 export interface RouterVideos {
     [key: string]: string;
 }
+
+export interface Tabs {
+    [key: string]: {
+        title: string;
+        description: string;
+    };
+}

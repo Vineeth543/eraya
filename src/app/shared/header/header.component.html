@@ -1,5 +1,6 @@
-<header class="absolute w-screen">
-    <nav class="container mx-auto flex justify-between items-center mt-4 pl-2 pr-10 py-1 rounded-xl bg-[#4E4E4E] bg-opacity-80">
+<header class="absolute w-screen flex flex-col items-center justify-center">
+    <nav
+        class="relative z-10 container mx-auto flex justify-between items-center mt-4 pl-2 pr-10 py-1 rounded-xl bg-[#4E4E4E] bg-opacity-80">
         <div class="w-16 flex items-center justify-center">
             <img
                 src="/icons/logo.png"
@@ -10,21 +11,46 @@
         <ul class="flex items-center gap-6 text-white text-xl">
             <li
                 *ngFor="let route of routes"
-                class="cursor-pointer hover:text-[#489188] hover:scale-105 transition-all duration-300"
+                class="cursor-pointer hover:text-[#489188] hover:scale-105 transition-all duration-300 ease-in-out"
                 [routerLink]="route.path"
                 [routerLinkActive]="'active'">
                 {{ route.text }}
             </li>
         </ul>
     </nav>
+
+    <div
+        *ngIf="tabs?.[_currentTab]"
+        class="absolute top-0 container mx-auto h-screen flex items-center">
+        <div class="w-1/2 flex flex-col gap-14 text-white">
+            <span class="text-7xl font-bold">{{ tabs[_currentTab].title }}</span>
+
+            <p class="text-xl">{{ tabs[_currentTab].description }}</p>
+        </div>
+
+        <div class="w-1/2 flex justify-end">
+            <div class="w-fit flex flex-col gap-6 p-3 rounded-xl bg-[#4E4E4E] bg-opacity-80">
+                <div
+                    *ngFor="let social of socials"
+                    [title]="social.icon"
+                    class="w-5 h-5 overflow-hidden cursor-pointer hover:scale-150 transition-all duration-300 ease-in-out">
+                    <img
+                        src="/icons/{{ social.icon }}.svg"
+                        alt="{{ social.icon }}"
+                        class="w-full h-full object-cover"
+                        (click)="_navigateToSocials(social.url)" />
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
 
 <video
-    class="absolute -z-10 w-screen h-screen bg-cover bg-center bg-no-repeat object-cover transform scale-x-110"
+    class="absolute -z-10 w-screen h-screen bg-cover bg-center bg-no-repeat object-cover transform"
     loop
     muted
     autoplay>
     <source
-        [src]="currentBg$ | async"
+        [src]="_videoSource$ | async"
         [type]="'video/mp4'" />
 </video>
