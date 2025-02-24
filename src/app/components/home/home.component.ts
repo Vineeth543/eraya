@@ -2,11 +2,12 @@ import { Service } from '../../interfaces/services.interface';
 import { SERVICES } from '../../data/services.data';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../shared/button/button.component';
+import { FloatingSquaresComponent } from '../../shared/floating-squares/floating-squares.component';
 import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'app-home',
-    imports: [CommonModule, ButtonComponent],
+    imports: [CommonModule, ButtonComponent, FloatingSquaresComponent],
     templateUrl: './home.component.html',
     styleUrl: './home.component.less',
     changeDetection: ChangeDetectionStrategy.OnPush,

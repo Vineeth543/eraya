@@ -1,0 +1,18 @@
+<div
+    class="absolute top-0"
+    [ngClass]="{
+        'left-0': side === 'left',
+        'right-0': side === 'right',
+        'rotate-90': type === 'secondary' && side === 'left',
+        '-rotate-90': type === 'secondary' && side === 'right',
+    }">
+    <div
+        class="absolute -top-24 w-32 h-40 rounded-3xl border border-white bg-[#D8E8E7A6] bg-opacity-80"
+        [ngClass]="{ '-left-10': side === 'left', '-right-10': side === 'right' }"></div>
+    <div
+        class="absolute -top-8 w-32 h-40 rounded-3xl border border-white bg-[#F4D5B8A6] bg-opacity-80"
+        [ngClass]="{ 'left-10': side === 'left', 'right-10': side === 'right' }"></div>
+    <div
+        class="absolute -top-16 w-32 h-40 rounded-3xl border border-white bg-[#D8E8E7A6] bg-opacity-80"
+        [ngClass]="{ 'left-32': side === 'left', 'right-32': side === 'right' }"></div>
+</div>
