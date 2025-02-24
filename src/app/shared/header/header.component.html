@@ -9,12 +9,22 @@
 
         <ul class="flex items-center gap-6 text-white text-xl">
             <li
-                *ngFor="let link of links"
+                *ngFor="let route of routes"
                 class="cursor-pointer hover:text-[#489188] hover:scale-105 transition-all duration-300"
-                [routerLink]="link.path"
+                [routerLink]="route.path"
                 [routerLinkActive]="'active'">
-                {{ link.name }}
+                {{ route.text }}
             </li>
         </ul>
     </nav>
 </header>
+
+<video
+    class="absolute -z-10 w-screen h-screen bg-cover bg-center bg-no-repeat object-cover transform scale-x-110"
+    loop
+    muted
+    autoplay>
+    <source
+        [src]="currentBg$ | async"
+        [type]="'video/mp4'" />
+</video>
