@@ -1,0 +1,76 @@
+<div class="relative w-screen py-16 {{ backgroundColor }}">
+    <app-float-square
+        [type]="floatingSquaresType"
+        [side]="floatingSquaresSide">
+    </app-float-square>
+
+    <div
+        class="container mx-auto flex gap-12"
+        [ngClass]="{ 'flex-row-reverse': cardType === 'secondary' }">
+        <div
+            *ngIf="safeUrl"
+            class="w-1/2 overflow-hidden rounded-3xl">
+            <iframe
+                class="w-full h-full"
+                [src]="safeUrl"
+                title="Eraya Video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="w-1/2 flex flex-col gap-4 py-8">
+            <span
+                *ngIf="header"
+                class="text-lg text-[#757575] font-black uppercase">
+                {{ header }}
+            </span>
+
+            <span
+                *ngIf="title"
+                class="text-5xl font-black leading-[60px] uppercase">
+                {{ title }}
+            </span>
+
+            <p
+                *ngIf="description"
+                class="text-lg text-[#6E6E6E]">
+                {{ description }}
+            </p>
+
+            <div
+                *ngIf="leftStrengths?.length || rightStrengths?.length"
+                class="flex gap-20">
+                <div
+                    *ngIf="leftStrengths?.length"
+                    class="flex flex-col gap-4">
+                    <div
+                        *ngFor="let strength of leftStrengths"
+                        class="flex gap-2 items-center">
+                        <span class="text-xl">✅</span>
+                        <span class="text-xl">{{ strength }}</span>
+                    </div>
+                </div>
+
+                <div
+                    *ngIf="rightStrengths?.length"
+                    class="flex flex-col gap-4">
+                    <div
+                        *ngFor="let strength of rightStrengths"
+                        class="flex gap-2 items-center">
+                        <span class="text-xl">✅</span>
+                        <span class="text-xl">{{ strength }}</span>
+                    </div>
+                </div>
+            </div>
+
+            <app-button
+                *ngIf="buttonLabel"
+                class="mt-2"
+                [text]="buttonLabel">
+            </app-button>
+        </div>
+    </div>
+</div>

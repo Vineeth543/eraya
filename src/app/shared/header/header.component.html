@@ -45,12 +45,14 @@
     </div>
 </header>
 
-<video
-    class="absolute -z-10 w-screen h-screen bg-cover bg-center bg-no-repeat object-cover transform"
-    loop
-    muted
-    autoplay>
-    <source
-        [src]="_videoSource$ | async"
-        [type]="'video/mp4'" />
-</video>
+<div class="absolute -z-10 w-screen h-screen">
+    <video
+        class="w-full h-full bg-cover bg-center bg-no-repeat object-cover transform"
+        loop
+        muted
+        autoplay>
+        <source
+            [src]="_videoSource$ | async"
+            [type]="'video/mp4'" />
+    </video>
+</div>

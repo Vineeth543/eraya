@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { FloatingSquaresSide, FloatingSquaresType } from '../../interfaces/custom.interface';
 
 @Component({
     selector: 'app-float-square',
@@ -8,6 +9,6 @@ import { Component, Input } from '@angular/core';
     styleUrl: './floating-squares.component.less',
 })
 export class FloatingSquaresComponent {
-    @Input() public side: 'left' | 'right' = 'left';
-    @Input() public type: 'primary' | 'secondary' = 'primary';
+    @Input() public side: FloatingSquaresSide = 'left';
+    @Input() public type: FloatingSquaresType = 'primary';
 }
