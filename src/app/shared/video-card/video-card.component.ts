@@ -3,7 +3,7 @@ import { ButtonComponent } from '../button/button.component';
 import { Component, Input, OnInit } from '@angular/core';
 import { FloatingSquaresComponent } from '../floating-squares/floating-squares.component';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { FloatingSquaresSide, FloatingSquaresType, VideoCardType } from '../../interfaces/custom.interface';
+import { ButtonType, FloatingSquaresSide, FloatingSquaresType, VideoCardType } from '../../interfaces/custom.interface';
 
 @Component({
     selector: 'app-video-card',
@@ -17,7 +17,7 @@ export class VideoCardComponent implements OnInit {
     @Input() public videoUrl: string = '';
     @Input() public cardType!: VideoCardType;
     @Input() public buttonUrl: string = '';
-    @Input() public buttonType: string = '';
+    @Input() public buttonType!: ButtonType;
     @Input() public buttonLabel: string = '';
     @Input() public description: string = '';
     @Input() public leftStrengths: string[] = [];

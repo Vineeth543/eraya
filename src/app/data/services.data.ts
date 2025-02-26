@@ -101,7 +101,7 @@ export const SERVICES_CARD: VideoCard[] = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
         leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
-        rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
+        rightStrengths: [],
         backgroundColor: 'bg-[#F8F8F8]',
         floatingSquaresSide: 'right',
         floatingSquaresType: 'primary',
@@ -117,7 +117,7 @@ export const SERVICES_CARD: VideoCard[] = [
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
         leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
-        rightStrengths: [],
+        rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
         backgroundColor: 'bg-[#F6FFFE]',
         floatingSquaresSide: 'left',
         floatingSquaresType: 'primary',

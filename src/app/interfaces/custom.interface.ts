@@ -4,13 +4,15 @@ export type FloatingSquaresType = 'primary' | 'secondary';
 
 export type VideoCardType = 'primary' | 'secondary';
 
+export type ButtonType = 'primary' | 'secondary';
+
 export interface VideoCard {
     title: string;
     header: string;
     videoUrl: string;
     cardType: VideoCardType;
     buttonUrl: string;
-    buttonType: string;
+    buttonType: ButtonType;
     buttonLabel: string;
     description: string;
     leftStrengths: string[];
