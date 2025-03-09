@@ -1,47 +1,7 @@
 <div class="h-screen"></div>
 
-<div class="w-screen bg-[#F6FFFE]">
-    <div class="relative container mx-auto flex py-36">
-        <app-float-square class="absolute top-20"></app-float-square>
-
-        <div class="w-1/2 overflow-hidden rounded-3xl">
-            <img
-                src="/images/living-room-5.jpg"
-                alt="living-room"
-                class="w-full h-full hover:scale-105 transition-all duration-300" />
-        </div>
-
-        <div class="w-1/2 flex flex-col gap-10 justify-center p-12">
-            <span class="text-lg text-[#757575] font-black">Who We Are</span>
-
-            <span class="text-5xl font-black leading-[60px]">WE ARE PERFECT TEAM FOR HOME INTERIOR DECORATION</span>
-
-            <p class="text-lg text-[#6E6E6E]">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-            </p>
-
-            <div class="flex gap-20">
-                <div class="flex flex-col gap-4">
-                    <div
-                        *ngFor="let strength of leftStrengths"
-                        class="flex gap-2 items-center">
-                        <span class="text-xl">✅</span>
-                        <span class="text-xl">{{ strength }}</span>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <div
-                        *ngFor="let strength of rightStrengths"
-                        class="flex gap-2 items-center">
-                        <span class="text-xl">✅</span>
-                        <span class="text-xl">{{ strength }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="w-screen bg-[#F6FFFE] py-20">
+    <app-video-card [card]="aboutUsCards[0]"></app-video-card>
 </div>
 
 <div class="w-screen bg-[#F8F8F8]">
@@ -97,7 +57,7 @@
             <div class="relative w-3/4 h-[334px] overflow-hidden rounded-3xl">
                 <img
                     src="/images/shelf-2.jpg"
-                    alt="living-room"
+                    alt="shelf"
                     class="w-full h-full hover:scale-105 transition-all duration-300" />
             </div>
 
@@ -118,52 +78,4 @@
     </div>
 </div>
 
-<div class="w-screen bg-[url('/images/office-space.jpg')] bg-cover bg-center bg-no-repeat bg-[#f6fffee3] bg-blend-lighten">
-    <div class="relative container mx-auto flex gap-12 py-16">
-        <app-float-square [side]="'right'"></app-float-square>
-
-        <div class="w-1/2 overflow-hidden rounded-3xl">
-            <iframe
-                class="w-full h-full"
-                src="https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-        <div class="w-1/2 flex flex-col gap-4 py-8">
-            <span class="text-lg text-[#757575] font-black">TRUST US NOW</span>
-
-            <span class="text-5xl font-black leading-[60px]">WHY TO CHOOSE OUR HOME DESIGN INTERIOR SERVICES</span>
-
-            <p class="text-lg text-[#6E6E6E]">
-                Lorem ipsum dolor Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's
-                standard dummy text ever since the 1500s amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis,
-                pulvinar dapibus leo.
-            </p>
-
-            <div class="flex gap-20">
-                <div class="flex flex-col gap-4">
-                    <div
-                        *ngFor="let strength of leftStrengths"
-                        class="flex gap-2 items-center">
-                        <span class="text-xl">✅</span>
-                        <span class="text-xl">{{ strength }}</span>
-                    </div>
-                </div>
-
-                <div class="flex flex-col gap-4">
-                    <div
-                        *ngFor="let strength of rightStrengths"
-                        class="flex gap-2 items-center">
-                        <span class="text-xl">✅</span>
-                        <span class="text-xl">{{ strength }}</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<app-video-card [card]="aboutUsCards[1]"></app-video-card>

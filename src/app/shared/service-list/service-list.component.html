@@ -27,13 +27,33 @@
 
                 <p class="text-xl text-[#1A2239]">We have been providing great floring solutions service.</p>
 
-                <app-button [text]="'View Services'"></app-button>
+                <app-button
+                    [text]="'View Services'"
+                    [redirectUrl]="'/services'">
+                </app-button>
             </div>
 
-            <div class="w-full h-[326px] flex flex-col gap-7 justify-center px-10 py-8 text-white bg-[#489188] rounded-3xl shadow-lg">
+            <div
+                class="relative w-full h-[326px] flex flex-col gap-7 justify-center px-10 py-8 text-white bg-[#489188] rounded-3xl shadow-lg">
                 <span class="text-5xl font-semibold">+{{ moreServicesCount }}</span>
 
                 <span class="text-5xl font-semibold">More</span>
+
+                <div class="absolute top-0 left-1/2 w-28">
+                    <img
+                        src="/icons/curves2.svg"
+                        alt="curves"
+                        class="w-full h-full object-cover" />
+                </div>
+
+                <div
+                    class="absolute top-2/3 left-3/4 w-16 cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out"
+                    (click)="_showMoreServices()">
+                    <img
+                        src="/icons/right-arrow.svg"
+                        alt="arrow"
+                        class="w-full h-full object-cover" />
+                </div>
             </div>
         </div>
     </div>

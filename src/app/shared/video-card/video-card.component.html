@@ -1,18 +1,18 @@
-<div class="relative w-screen py-16 {{ backgroundColor }}">
+<div class="relative w-screen py-16 {{ card.backgroundColor }}">
     <app-float-square
-        [type]="floatingSquaresType"
-        [side]="floatingSquaresSide">
+        [type]="card.floatingSquaresType"
+        [side]="card.floatingSquaresSide">
     </app-float-square>
 
     <div
         class="container mx-auto flex gap-12"
-        [ngClass]="{ 'flex-row-reverse': cardType === 'secondary' }">
+        [ngClass]="{ 'flex-row-reverse': card.cardType === 'secondary' }">
         <div
-            *ngIf="safeUrl"
+            *ngIf="_safeUrl; else image"
             class="w-1/2 overflow-hidden rounded-3xl">
             <iframe
                 class="w-full h-full"
-                [src]="safeUrl"
+                [src]="_safeUrl"
                 title="Eraya Video"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -21,33 +21,42 @@
             </iframe>
         </div>
 
+        <ng-template #image>
+            <div class="w-1/2 overflow-hidden rounded-3xl">
+                <img
+                    src="{{ card.imageSrc }}"
+                    alt="living-room"
+                    class="w-full h-full hover:scale-105 transition-all duration-300" />
+            </div>
+        </ng-template>
+
         <div class="w-1/2 flex flex-col gap-4 py-8">
             <span
-                *ngIf="header"
+                *ngIf="card.header"
                 class="text-lg text-[#757575] font-black uppercase">
-                {{ header }}
+                {{ card.header }}
             </span>
 
             <span
-                *ngIf="title"
+                *ngIf="card.title"
                 class="text-5xl font-black leading-[60px] uppercase">
-                {{ title }}
+                {{ card.title }}
             </span>
 
             <p
-                *ngIf="description"
+                *ngIf="card.description"
                 class="text-lg text-[#6E6E6E]">
-                {{ description }}
+                {{ card.description }}
             </p>
 
             <div
-                *ngIf="leftStrengths?.length || rightStrengths?.length"
+                *ngIf="card.leftStrengths?.length || card.rightStrengths?.length"
                 class="flex gap-20">
                 <div
-                    *ngIf="leftStrengths?.length"
+                    *ngIf="card.leftStrengths?.length"
                     class="flex flex-col gap-4">
                     <div
-                        *ngFor="let strength of leftStrengths"
+                        *ngFor="let strength of card.leftStrengths"
                         class="flex gap-2 items-center">
                         <span class="text-xl">✅</span>
                         <span class="text-xl">{{ strength }}</span>
@@ -55,10 +64,10 @@
                 </div>
 
                 <div
-                    *ngIf="rightStrengths?.length"
+                    *ngIf="card.rightStrengths?.length"
                     class="flex flex-col gap-4">
                     <div
-                        *ngFor="let strength of rightStrengths"
+                        *ngFor="let strength of card.rightStrengths"
                         class="flex gap-2 items-center">
                         <span class="text-xl">✅</span>
                         <span class="text-xl">{{ strength }}</span>
@@ -67,11 +76,11 @@
             </div>
 
             <app-button
-                *ngIf="buttonLabel"
+                *ngIf="card.buttonLabel"
                 class="mt-2"
-                [type]="buttonType"
-                [text]="buttonLabel"
-                [redirectUrl]="buttonUrl">
+                [type]="card.buttonType"
+                [text]="card.buttonLabel"
+                [redirectUrl]="card.buttonUrl">
             </app-button>
         </div>
     </div>

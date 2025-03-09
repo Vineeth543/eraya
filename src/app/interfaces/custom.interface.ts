@@ -9,7 +9,8 @@ export type ButtonType = 'primary' | 'secondary';
 export interface VideoCard {
     title: string;
     header: string;
-    videoUrl: string;
+    videoUrl?: string;
+    imageSrc?: string;
     cardType: VideoCardType;
     buttonUrl: string;
     buttonType: ButtonType;

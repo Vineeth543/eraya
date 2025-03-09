@@ -1,16 +1,56 @@
-<div class="container mx-auto h-screen flex justify-end items-center">
-    <div class="w-1/2 flex flex-col gap-5 px-12 py-16 rounded-3xl border border-white bg-[#4E4E4E] bg-opacity-80 text-white">
-        <span class="text-7xl font-extrabold"> Design Your Space For Living </span>
+<div class="container mx-auto h-screen flex items-center justify-end">
+    <div
+        class="relative w-1/2 h-[500px] flex flex-col justify-between px-12 py-16 rounded-3xl border border-white bg-[#4E4E4E] bg-opacity-80 text-white">
+        <div class="absolute -top-8 -left-12 w-28">
+            <img
+                src="/icons/curves1.svg"
+                alt="curves"
+                class="w-full h-full object-cover" />
+        </div>
 
-        <p class="text-2xl font-normal">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-            text ever since the.
-        </p>
+        <ng-container *ngIf="!_isFormVisible">
+            <div class="w-full flex flex-col gap-6 overflow-hidden">
+                <span class="text-7xl font-extrabold"> Design Your Space For Living </span>
 
-        <app-button
-            class="mt-9"
-            [text]="'Get Started'">
-        </app-button>
+                <p class="text-2xl font-normal">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                    dummy text ever since the.
+                </p>
+            </div>
+
+            <app-button
+                class="w-fit"
+                [text]="'Contact Now'"
+                (click)="_onOpenForm()">
+            </app-button>
+        </ng-container>
+
+        <ng-container *ngIf="_isFormVisible">
+            <div class="w-full flex flex-col gap-6">
+                <input
+                    class="w-full p-3 bg-transparent border border-white rounded-lg text-white outline-none"
+                    [type]="'text'"
+                    [placeholder]="'Name'" />
+
+                <input
+                    class="w-full p-3 bg-transparent border border-white rounded-lg text-white outline-none"
+                    [type]="'email'"
+                    [placeholder]="'Email'" />
+
+                <textarea
+                    class="w-full p-3 bg-transparent border border-white rounded-lg text-white outline-none"
+                    [value]="''"
+                    [rows]="4"
+                    [placeholder]="'How can we help you?'">
+                </textarea>
+            </div>
+
+            <app-button
+                class="w-fit"
+                [text]="'Get Callback'"
+                (click)="_onSubmitForm()">
+            </app-button>
+        </ng-container>
     </div>
 </div>
 
@@ -28,39 +68,39 @@
 
             <div class="flex gap-4 mt-10 justify-between">
                 <div class="flex flex-col gap-3 items-center">
-                    <span class="text-[#489188] text-5xl font-semibold">53k</span>
-                    <span class="text-[#6D776C] text-xl">Happy Client</span>
-                </div>
-
-                <span class="border border-[#A7B1A9]"></span>
-
-                <div class="flex flex-col gap-3 items-center">
-                    <span class="text-[#489188] text-5xl font-semibold">10k</span>
-                    <span class="text-[#6D776C] text-xl">Projects Done</span>
-                </div>
-
-                <span class="border border-[#A7B1A9]"></span>
-
-                <div class="flex flex-col gap-3 items-center">
                     <span class="text-[#489188] text-5xl font-semibold">120</span>
-                    <span class="text-[#6D776C] text-xl">Get Award</span>
+                    <span class="text-[#6D776C] text-xl">Happy Clients</span>
+                </div>
+
+                <span class="border border-[#A7B1A9]"></span>
+
+                <div class="flex flex-col gap-3 items-center">
+                    <span class="text-[#489188] text-5xl font-semibold">20</span>
+                    <span class="text-[#6D776C] text-xl">Projects Completed</span>
+                </div>
+
+                <span class="border border-[#A7B1A9]"></span>
+
+                <div class="flex flex-col gap-3 items-center">
+                    <span class="text-[#489188] text-5xl font-semibold">2</span>
+                    <span class="text-[#6D776C] text-xl">Awards Won</span>
                 </div>
             </div>
         </div>
 
         <div class="w-1/2 flex gap-10 items-end">
-            <div class="w-1/2">
+            <div class="w-1/2 rounded-3xl overflow-hidden">
                 <img
                     src="/images/modern-room-1.png"
                     alt="modern-room"
-                    class="w-full h-full rounded-3xl overflow-hidden" />
+                    class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
             </div>
 
-            <div class="w-1/2">
+            <div class="w-1/2 rounded-3xl overflow-hidden">
                 <img
                     src="/images/living-room-1.png"
                     alt="modern-room"
-                    class="w-full h-full rounded-3xl overflow-hidden" />
+                    class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
             </div>
         </div>
     </div>
@@ -70,11 +110,11 @@
     <div class="relative container mx-auto py-16">
         <app-float-square [type]="'secondary'"></app-float-square>
 
-        <div class="w-2/3">
+        <div class="w-2/3 rounded-3xl overflow-hidden">
             <img
                 src="/images/kitchen-design-1.png"
                 alt="modern-room"
-                class="w-full h-full rounded-3xl overflow-hidden" />
+                class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
         </div>
 
         <div class="absolute right-0 top-1/4 w-1/2 flex flex-col gap-10 p-12 bg-white rounded-3xl">
@@ -101,7 +141,10 @@
         <div class="flex justify-between items-center">
             <span class="text-5xl font-semibold">Our Featured Projects</span>
 
-            <app-button [text]="'View More'"></app-button>
+            <app-button
+                [text]="'View More'"
+                [redirectUrl]="'/projects'">
+            </app-button>
         </div>
 
         <div class="w-full flex flex-col gap-6">
@@ -110,7 +153,7 @@
                     <img
                         src="/images/living-room-4.jpg"
                         alt="modern-room"
-                        class="w-full h-full object-cover shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300" />
+                        class="w-full h-full object-cover shadow-lg hover:scale-105 transition-all duration-300" />
                 </div>
 
                 <div class="w-1/4 flex flex-col gap-6">
@@ -118,14 +161,14 @@
                         <img
                             src="/images/bedroom-interior-2.jpg"
                             alt="modern-room"
-                            class="w-full h-full object-cover hover:scale-105 hover:shadow-xl transition-all duration-300" />
+                            class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
                     </div>
 
                     <div class="h-[220px] rounded-3xl overflow-hidden">
                         <img
                             src="/images/living-room-3.jpg"
                             alt="modern-room"
-                            class="w-full h-full object-cover hover:scale-105 hover:shadow-xl transition-all duration-300" />
+                            class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
                     </div>
                 </div>
             </div>
@@ -135,62 +178,18 @@
                     <img
                         src="/images/living-room-2.jpg"
                         alt="modern-room"
-                        class="w-full h-full object-cover hover:scale-105 hover:shadow-xl transition-all duration-300" />
+                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
                 </div>
 
                 <div class="w-1/2 h-[288px] rounded-3xl overflow-hidden">
                     <img
                         src="/images/contemporary-office-1.jpg"
                         alt="modern-room"
-                        class="w-full h-full object-cover hover:scale-105 hover:shadow-xl transition-all duration-300" />
+                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="w-screen bg-[#F6FFFE]">
-    <div class="container relative mx-auto flex flex-col gap-10 items-center py-16">
-        <app-float-square
-            [side]="'right'"
-            [type]="'secondary'">
-        </app-float-square>
-
-        <span class="text-5xl font-semibold">How We Work</span>
-
-        <div class="flex flex-wrap gap-7 items-center justify-center">
-            <div
-                class="w-[454px] h-[326px] flex flex-col gap-7 items-start px-10 py-8 bg-white rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-                <span class="text-5xl font-semibold truncate">01</span>
-
-                <span class="text-3xl font-semibold truncate">Statement of the problem</span>
-
-                <p class="text-xl text-[#5C675A] text-start">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
-                </p>
-            </div>
-
-            <div
-                class="w-[454px] h-[326px] flex flex-col gap-7 items-start px-10 py-8 text-white bg-[#489188] rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-                <span class="text-5xl font-semibold truncate">02</span>
-
-                <span class="text-3xl font-semibold truncate">Project presentation</span>
-
-                <p class="text-xl text-start">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
-                </p>
-            </div>
-
-            <div
-                class="w-[454px] h-[326px] flex flex-col gap-7 items-start px-10 py-8 bg-white rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-                <span class="text-5xl font-semibold truncate">03</span>
-
-                <span class="text-3xl font-semibold truncate">Development of renderings</span>
-
-                <p class="text-xl text-[#5C675A] text-start">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<app-work-card [card]="_procedure"></app-work-card>

@@ -44,4 +44,13 @@ export class ServiceListComponent implements AfterViewInit {
         this.cardContainerWidth < 0 && (this.cardContainerWidth = 0);
         this.cdr.detectChanges();
     }
+
+    public _showMoreServices(): void {
+        const containerWidth: number = this.cardContainer.nativeElement.offsetWidth;
+        const cardsPerRow: number = Math.floor((containerWidth + this.CARD_GAP - this.CARD_WIDTH) / (this.CARD_WIDTH + this.CARD_GAP));
+        const maxCards: number = cardsPerRow * this.MAX_ROWS;
+        this.visibleServices = this.services.slice(this.visibleServices.length, this.visibleServices.length + maxCards);
+        this.moreServicesCount = this.services.length - this.visibleServices.length;
+        this.cdr.detectChanges();
+    }
 }

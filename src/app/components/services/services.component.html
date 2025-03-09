@@ -2,54 +2,9 @@
 
 <app-service-list></app-service-list>
 
-<div class="w-screen bg-[#F8F8F8]">
-    <div class="container relative mx-auto flex flex-col gap-8 pt-8 pb-16">
-        <app-float-square
-            [side]="'right'"
-            [type]="'secondary'">
-        </app-float-square>
-
-        <span class="text-lg text-[#757575] font-black">HOW WE WORK</span>
-
-        <span class="text-5xl font-black leading-[60px]">OUR WORK PROCEDURE</span>
-
-        <div class="flex flex-wrap gap-4 items-center justify-between">
-            <div
-                *ngFor="let item of procedures"
-                class="w-[454px] h-[326px] flex flex-col gap-8 items-start px-10 py-8 rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
-                [ngClass]="{ 'bg-[#489188] text-white': item.theme === 'dark', 'bg-white ': item.theme === 'light' }">
-                <div class="w-16 h-16 overflow-hidden">
-                    <img
-                        src="/icons/{{ item.icon }}.svg"
-                        alt="{{ item.icon }}"
-                        class="w-full h-full" />
-                </div>
-
-                <span class="text-3xl font-black">{{ item.title }}</span>
-
-                <p
-                    class="text-xl text-start"
-                    [ngClass]="{ 'text-white': item.theme === 'dark', 'text-[#5C675A]': item.theme === 'light' }">
-                    {{ item.description }}
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
+<app-work-card [card]="_procedure"></app-work-card>
 
 <app-video-card
-    *ngFor="let card of servicesCard"
-    [title]="card.title"
-    [header]="card.header"
-    [videoUrl]="card.videoUrl"
-    [cardType]="card.cardType"
-    [buttonUrl]="card.buttonUrl"
-    [buttonType]="card.buttonType"
-    [buttonLabel]="card.buttonLabel"
-    [description]="card.description"
-    [leftStrengths]="card.leftStrengths"
-    [rightStrengths]="card.rightStrengths"
-    [backgroundColor]="card.backgroundColor"
-    [floatingSquaresSide]="card.floatingSquaresSide"
-    [floatingSquaresType]="card.floatingSquaresType">
+    *ngFor="let card of _servicesCard"
+    [card]="card">
 </app-video-card>

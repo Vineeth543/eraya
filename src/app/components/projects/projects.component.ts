@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
     templateUrl: './projects.component.html',
     styleUrl: './projects.component.less',
 })
-export class ProjectsComponent {}
+export class ProjectsComponent {
+    constructor() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+}

@@ -1,0 +1,52 @@
+<div class="w-screen {{ card.backgroundColor }}">
+    <div class="container relative mx-auto flex flex-col gap-8 pt-8 pb-16">
+        <app-float-square
+            [side]="'right'"
+            [type]="'secondary'">
+        </app-float-square>
+
+        <span
+            *ngIf="card.header"
+            class="text-lg text-[#757575] font-black uppercase">
+            {{ card.header }}
+        </span>
+
+        <span
+            *ngIf="card.title"
+            class="text-5xl font-black leading-[60px] uppercase {{ card.titleClass }}">
+            {{ card.title }}
+        </span>
+
+        <div class="flex flex-wrap gap-4 items-center justify-between">
+            <div
+                *ngFor="let service of card.services"
+                class="w-[454px] h-[326px] flex flex-col gap-8 items-start px-10 py-8 rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+                [ngClass]="{ 'bg-[#489188] text-white': service.theme === 'dark', 'bg-white ': service.theme === 'light' }">
+                <div
+                    *ngIf="service?.icon; else serial"
+                    class="w-16 h-16 overflow-hidden">
+                    <img
+                        src="/icons/{{ service.icon }}.svg"
+                        alt="{{ service.icon }}"
+                        class="w-full h-full" />
+                </div>
+
+                <ng-template #serial>
+                    <span class="text-5xl font-semibold">{{ service.serial }}</span>
+                </ng-template>
+
+                <span
+                    class="text-3xl"
+                    [ngClass]="{ 'font-black': !!service.icon, 'font-semibold': !service.icon }">
+                    {{ service.title }}
+                </span>
+
+                <p
+                    class="text-xl"
+                    [ngClass]="{ 'text-white': service.theme === 'dark', 'text-[#5C675A]': service.theme === 'light' }">
+                    {{ service.description }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
