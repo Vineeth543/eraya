@@ -108,7 +108,7 @@ export const SERVICES_CARD: VideoCard[] = [
         videoUrl: 'https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP',
         cardType: 'primary',
         buttonUrl: '/contact',
-        buttonType: 'secondary',
+        buttonType: 'primary',
         buttonLabel: 'Contact Us',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
@@ -124,7 +124,7 @@ export const SERVICES_CARD: VideoCard[] = [
         videoUrl: 'https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP',
         cardType: 'secondary',
         buttonUrl: '/contact',
-        buttonType: 'secondary',
+        buttonType: 'primary',
         buttonLabel: 'Contact Us',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
@@ -140,7 +140,7 @@ export const SERVICES_CARD: VideoCard[] = [
         videoUrl: 'https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP',
         cardType: 'primary',
         buttonUrl: '/contact',
-        buttonType: 'secondary',
+        buttonType: 'primary',
         buttonLabel: 'Contact Us',
         description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',

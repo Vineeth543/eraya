@@ -1,0 +1,124 @@
+<div class="h-screen"></div>
+
+<div
+    [id]="'contact-form'"
+    class="w-screen bg-[#F6FFFE]">
+    <div class="container relative mx-auto flex flex-col items-center pt-16 lg:pb-80 xl:pb-64">
+        <app-float-square></app-float-square>
+
+        <div
+            class="w-11/12 lg:w-full text-center lg:text-start flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-4 lg:px-10 xl:px-32">
+            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-8 justify-between">
+                <div class="w-3/4 flex flex-col gap-5">
+                    <span class="text-6xl font-bold">Let’s Talk</span>
+
+                    <span class="text-xl">
+                        Have some big idea or brand to develop and need help? Then reach out we'd love to hear about your project and
+                        provide help
+                    </span>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <span class="text-3xl font-bold">Phone</span>
+
+                    <a
+                        href="tel:+919986723596"
+                        class="w-fit text-xl underline cursor-pointer">
+                        (+91) 998 6723 596
+                    </a>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <span class="text-3xl font-bold">Email</span>
+
+                    <a
+                        href="mailto:eraya@gmail.com"
+                        class="w-fit text-xl underline cursor-pointer">
+                        {{ 'eraya@gmail.com' }}
+                    </a>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <span class="text-3xl font-bold">Office</span>
+
+                    <a
+                        class="w-fit text-xl underline cursor-pointer"
+                        [href]="'https://maps.app.goo.gl/pnT2aMWBi5BCwMU96'"
+                        [target]="'_blank'">
+                        123, 4th Cross, 5th Main, 6th Sector, HSR Layout, Bangalore - 560102
+                    </a>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <span class="text-3xl font-bold">Socials</span>
+
+                    <div class="flex flex-col gap-2 items-center lg:items-start">
+                        <a
+                            *ngFor="let social of _socials"
+                            class="w-fit text-xl underline cursor-pointer"
+                            [href]="social.url"
+                            [target]="'_blank'">
+                            {{ social.title }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <span class="lg:hidden w-full border border-[#e5e7eb]"></span>
+
+            <div class="w-full lg:w-1/2 flex flex-col gap-5 justify-between">
+                <div class="w-full flex flex-col gap-3">
+                    <span class="text-lg font-medium">Name</span>
+
+                    <input
+                        [type]="'text'"
+                        class="w-full p-3 bg-[#F7F7F7] outline-none border" />
+                </div>
+
+                <div class="w-full flex flex-col gap-3">
+                    <span class="text-lg font-medium">Phone</span>
+
+                    <input
+                        [type]="'text'"
+                        class="w-full p-3 bg-[#F7F7F7] outline-none border" />
+                </div>
+
+                <div class="w-full flex flex-col gap-3">
+                    <span class="text-lg font-medium">Email</span>
+
+                    <input
+                        [type]="'text'"
+                        class="w-full p-3 bg-[#F7F7F7] outline-none border" />
+                </div>
+
+                <div class="w-full flex flex-col gap-3">
+                    <span class="text-lg font-medium">Enquiry</span>
+
+                    <textarea
+                        class="w-full p-3 bg-[#F7F7F7] outline-none border"
+                        [rows]="4"></textarea>
+                </div>
+
+                <app-button
+                    class="w-full"
+                    [type]="'secondary'"
+                    [text]="'Get Callback'"
+                    [block]="true"
+                    (click)="_onSubmitForm()">
+                </app-button>
+            </div>
+        </div>
+
+        <div class="relative w-11/12 my-10 lg:my-0">
+            <div class="lg:absolute top-10 w-fit flex flex-col gap-10 items-center bg-[#489188] px-16 py-10">
+                <span class="text-6xl text-white text-center font-black uppercase">LETS CHANGE YOUR OWN HOME INTERIOR DESIGN NOW</span>
+
+                <button
+                    (click)="_scrollToContactForm()"
+                    class="relative z-10 w-fit px-6 py-3 text-white text-xl font-semibold bg-black border border-white hover:bg-white hover:text-black hover:border-black focus:outline-none focus:ring focus:ring-black transition duration-300 ease-in-out">
+                    Connect With Us
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

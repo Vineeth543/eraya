@@ -1,6 +1,6 @@
 <button
-    class="w-fit px-6 py-3 text-white text-xl font-semibold bg-[#489188] border border-white hover:bg-white hover:text-[#489188] hover:border-[#489188] focus:outline-none focus:ring focus:ring-[#489188] transition duration-300 ease-in-out"
-    [ngClass]="{ 'rounded-2xl': type === 'primary' }"
+    class="px-6 py-3 text-white text-xl font-semibold bg-[#489188] border border-white hover:bg-white hover:text-[#489188] hover:border-[#489188] focus:outline-none focus:ring focus:ring-[#489188] transition duration-300 ease-in-out"
+    [ngClass]="{ 'w-full': block, 'w-fit': !block, 'rounded-lg': type === 'primary' }"
     [routerLink]="redirectUrl ? redirectUrl : null">
     {{ text }}
 </button>

@@ -10,7 +10,7 @@
 
         <ul class="flex items-center gap-6 text-white text-xl">
             <li
-                *ngFor="let route of routes"
+                *ngFor="let route of _routes"
                 class="cursor-pointer hover:text-[#489188] hover:scale-105 transition-all duration-300 ease-in-out"
                 [routerLink]="route.path"
                 [routerLinkActive]="'active'">
@@ -20,26 +20,27 @@
     </nav>
 
     <div
-        *ngIf="tabs?.[_currentTab]"
+        *ngIf="_tabs?.[_currentTab]"
         class="absolute top-0 container mx-auto h-screen flex items-center">
         <div class="w-1/2 flex flex-col gap-14 text-white">
-            <span class="text-7xl font-bold">{{ tabs[_currentTab].title }}</span>
+            <span class="text-7xl font-bold">{{ _tabs[_currentTab].title }}</span>
 
-            <p class="text-xl">{{ tabs[_currentTab].description }}</p>
+            <p class="text-xl">{{ _tabs[_currentTab].description }}</p>
         </div>
 
         <div class="w-1/2 flex justify-end">
             <div class="w-fit flex flex-col gap-6 p-3 rounded-xl bg-[#4E4E4E] bg-opacity-80">
-                <div
-                    *ngFor="let social of socials"
-                    [title]="social.icon"
+                <a
+                    *ngFor="let social of _socials"
+                    [href]="social.url"
+                    [title]="social.title"
+                    [target]="'_blank'"
                     class="w-5 h-5 overflow-hidden cursor-pointer hover:scale-150 transition-all duration-300 ease-in-out">
                     <img
                         src="/icons/{{ social.icon }}.svg"
-                        alt="{{ social.icon }}"
-                        class="w-full h-full object-cover"
-                        (click)="_navigateToSocials(social.url)" />
-                </div>
+                        alt="{{ social.title }}"
+                        class="w-full h-full object-cover" />
+                </a>
             </div>
         </div>
     </div>

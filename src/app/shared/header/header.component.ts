@@ -18,9 +18,9 @@ import { NavigationEnd, Router, RouterLink, RouterLinkActive } from '@angular/ro
 export class HeaderComponent {
     private readonly routeAndBackgroundMap: RouterVideos = ROUTER_VIDEOS;
 
-    public readonly tabs: Tabs = TABS;
-    public readonly routes: Routes[] = ROUTES;
-    public readonly socials: Socials[] = SOCIALS;
+    public readonly _tabs: Tabs = TABS;
+    public readonly _routes: Routes[] = ROUTES;
+    public readonly _socials: Socials[] = SOCIALS;
 
     public _currentTab: string = '';
     public _videoSource$: Observable<string> = new Observable<string>();
@@ -37,9 +37,5 @@ export class HeaderComponent {
                 return this.routeAndBackgroundMap?.[route.url];
             }),
         );
-    }
-
-    public _navigateToSocials(url: string): void {
-        window.open(url, '_blank');
     }
 }

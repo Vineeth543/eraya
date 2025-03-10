@@ -12,5 +12,6 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
     @Input() text: string = '';
     @Input() type: ButtonType = 'primary';
+    @Input() block: boolean = false;
     @Input() redirectUrl: string = '';
 }
