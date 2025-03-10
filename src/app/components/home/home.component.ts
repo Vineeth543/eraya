@@ -17,17 +17,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 export class HomeComponent {
     public readonly _procedure: Procedure = WORK_PROCEDURE_2;
 
-    public _isFormVisible: boolean = false;
-
     constructor() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    public _onOpenForm(): void {
-        this._isFormVisible = true;
-    }
-
-    public _onSubmitForm(): void {
-        this._isFormVisible = false;
     }
 }
