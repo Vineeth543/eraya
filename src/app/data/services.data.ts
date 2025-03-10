@@ -1,4 +1,4 @@
-import { VideoCard } from '../interfaces/custom.interface';
+import { Project, VideoCard } from '../interfaces/custom.interface';
 import { Procedure, Service } from '../interfaces/services.interface';
 
 export const SERVICES: Service[] = [
@@ -181,8 +181,41 @@ export const ABOUT_US_CARDS: VideoCard[] = [
             "Lorem ipsum dolor Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's standard dummy text ever since the 1500s amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
         leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
         rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
-        backgroundColor: 'bg-[#F6FFFE]',
+        backgroundColor: '',
         floatingSquaresSide: 'right',
         floatingSquaresType: 'primary',
+    },
+];
+
+export const PROJECTS: Project[] = [
+    {
+        title: 'PRE MADE HOME CONSULTATION',
+        image: '/images/living-room-1.png',
+        highlights: ['Office Meeting', 'Working Time Call', 'Come to Place'],
+    },
+    {
+        title: 'INTERIOR DESIGN REPAIR',
+        image: '/images/living-room-2.jpg',
+        highlights: ['Repair Design', 'Color Selection', 'Furniture Design'],
+    },
+    {
+        title: 'FULL HOUSE DECORATION',
+        image: '/images/living-room-3.jpg',
+        highlights: ['Color Selection', 'Furniture Design', 'Office Meeting'],
+    },
+    {
+        title: 'PRE BUILDING HOME DESIGN',
+        image: '/images/living-room-4.jpg',
+        highlights: ['Office Meeting', 'Working Time Call', 'Come to Place'],
+    },
+    {
+        title: 'FULL PACKAGE DECORATION',
+        image: '/images/living-room-5.jpg',
+        highlights: ['Frame Design', 'Color Selection', 'Furniture Design'],
+    },
+    {
+        title: 'EXPERIENCE FRAME DESIGN',
+        image: '/images/living-room-6.jpg',
+        highlights: ['Frame Design', 'Color Selection', 'Furniture Design'],
     },
 ];

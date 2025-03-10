@@ -22,3 +22,9 @@ export interface VideoCard {
     floatingSquaresSide: FloatingSquaresSide;
     floatingSquaresType: FloatingSquaresType;
 }
+
+export interface Project {
+    title: string;
+    image: string;
+    highlights: string[];
+}

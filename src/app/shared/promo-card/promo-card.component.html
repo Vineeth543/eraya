@@ -1,0 +1,44 @@
+<div class="w-screen {{ background }}">
+    <div class="relative container mx-auto flex py-16">
+        <app-float-square></app-float-square>
+
+        <div class="w-1/2 flex flex-col gap-10 justify-center p-12">
+            <span class="text-lg text-[#757575] font-black">PERFECT PARTNER</span>
+
+            <span class="text-5xl font-black leading-[60px]">WE HAVE PRIORITY FOR CREATING DREAM HOME DESIGN</span>
+
+            <p class="text-lg text-[#6E6E6E]">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque
+                ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
+
+            <app-button
+                [text]="'Contact Us'"
+                [redirectUrl]="'/contact'">
+            </app-button>
+        </div>
+
+        <div class="relative w-1/2 flex flex-col gap-16 items-end">
+            <div class="relative w-3/4 h-[334px] overflow-hidden rounded-3xl">
+                <img
+                    src="/images/shelf-2.jpg"
+                    alt="shelf"
+                    class="w-full h-full hover:scale-105 transition-all duration-300" />
+            </div>
+
+            <div class="absolute left-0 top-1/4 w-3/4 h-[334px] overflow-hidden rounded-3xl">
+                <img
+                    src="/images/living-room-5.jpg"
+                    alt="living-room"
+                    class="w-full h-full hover:scale-105 transition-all duration-300" />
+            </div>
+
+            <div class="relative w-3/4 h-[334px] overflow-hidden rounded-3xl">
+                <img
+                    src="/images/living-room-6.jpg"
+                    alt="living-room"
+                    class="w-full h-full hover:scale-105 transition-all duration-300" />
+            </div>
+        </div>
+    </div>
+</div>
