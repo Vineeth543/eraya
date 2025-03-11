@@ -28,3 +28,14 @@ export interface Project {
     image: string;
     highlights: string[];
 }
+
+export interface ContactData {
+    name: string;
+    phone: string;
+    email: string;
+    message: string;
+}
+
+export interface ContactResponse {
+    message: string;
+}
