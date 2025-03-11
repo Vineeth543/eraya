@@ -1,9 +1,9 @@
 <div class="w-screen bg-black">
-    <div class="container relative mx-auto flex flex-col gap-5 py-16 text-white">
+    <div class="container relative mx-auto flex flex-col gap-5 px-10 py-16 text-white">
         <app-float-square class="relative -top-28"></app-float-square>
 
-        <div class="flex justify-between">
-            <div class="flex flex-col items-start gap-4">
+        <div class="flex flex-wrap lg:flex-nowrap gap-x-4 gap-y-16 lg:gap-4 justify-between">
+            <div class="w-full sm:w-64 order-1 lg:order-none flex flex-col items-center lg:items-start gap-4">
                 <div class="w-32 flex items-center justify-center">
                     <img
                         src="/icons/logo.png"
@@ -11,30 +11,48 @@
                         class="w-full h-full object-cover" />
                 </div>
 
-                <span class="w-64">Lorem Ipsum is simply dummy text of the printing and typesetting.</span>
+                <span class="text-center lg:text-start">Lorem Ipsum is simply dummy text of the printing and typesetting.</span>
             </div>
 
-            <div class="flex flex-col items-start gap-4">
+            <div class="w-full sm:w-64 order-3 lg:order-none flex flex-col items-center lg:items-start gap-4">
                 <span class="text-xl font-semibold">Services</span>
-                <span>Architecture</span>
-                <span>Iriterior design</span>
-                <span>Lighting installation</span>
-                <span>Floor Planning</span>
+
+                <div class="flex flex-col items-center lg:items-start gap-3">
+                    <span>Architecture</span>
+                    <span>Iriterior design</span>
+                    <span>Lighting installation</span>
+                    <span>Floor Planning</span>
+                </div>
             </div>
 
-            <div class="flex flex-col items-start gap-4">
-                <span class="text-xl font-semibold">About Us</span>
-                <span>Our Team</span>
-                <span>Testimonials</span>
-                <span>Contact</span>
+            <div
+                class="w-full sm:w-64 order-4 lg:order-none flex flex-col items-center lg:items-start justify-between lg:justify-normal gap-3">
+                <span class="text-xl font-semibold">Contact Us</span>
+
+                <a
+                    href="tel:+919986723596"
+                    class="w-fit text-center lg:text-start cursor-pointer">
+                    +919986723596
+                </a>
+                <a
+                    href="mailto:eraya@gmail.com"
+                    class="w-fit text-center lg:text-start cursor-pointer">
+                    {{ 'eraya@gmail.com' }}
+                </a>
+                <a
+                    class="w-fit text-center lg:text-start cursor-pointer"
+                    [href]="'https://maps.app.goo.gl/pnT2aMWBi5BCwMU96'"
+                    [target]="'_blank'">
+                    123, 4th Cross, 5th Main, 6th Sector, HSR Layout, Bangalore - 560102
+                </a>
             </div>
 
-            <div class="flex flex-col items-start gap-4">
+            <div class="w-full sm:w-64 order-2 lg:order-none flex flex-col items-center lg:items-start gap-4">
                 <span class="text-xl font-semibold">Recent Works</span>
 
                 <div class="w-56 flex flex-wrap gap-4">
                     <div
-                        *ngFor="let image of recentWorkImages"
+                        *ngFor="let image of _recentWorkImages"
                         class="w-16 h-16 flex items-center justify-center cursor-pointer rounded-md overflow-hidden">
                         <img
                             src="{{ image }}"
@@ -45,18 +63,31 @@
             </div>
         </div>
 
-        <div class="h-[1px] bg-[#C4C4C4]"></div>
+        <div class="h-[1px] bg-[#C4C4C4] hidden lg:block"></div>
 
-        <div class="flex items-center justify-center gap-4">
-            <p>
-                &copy; Copyright {{ '@ ' + currentYear }} Eraya Interiors. All rights reserved. Developed by
+        <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-4 mt-10 lg:mt-0">
+            <span class="text-center lg:text-start">
+                &copy; Copyright {{ '@ ' + _currentYear }} Eraya Interiors. All rights reserved. Developed by
                 <a
-                    href="https://www.linkedin.com/in/vineeth-serigar/"
-                    target="_blank"
-                    class="text-blue-500">
+                    [href]="'https://www.linkedin.com/in/vineeth-serigar/'"
+                    [target]="'_blank'">
                     😎
                 </a>
-            </p>
+            </span>
+
+            <div class="flex gap-6">
+                <a
+                    *ngFor="let social of _socials"
+                    class="w-5 h-5 overflow-hidden cursor-pointer hover:scale-150 transition-all duration-300 ease-in-out"
+                    [href]="social.url"
+                    [title]="social.title"
+                    [target]="'_blank'">
+                    <img
+                        src="/icons/{{ social.icon }}.svg"
+                        alt="{{ social.title }}"
+                        class="w-full h-full object-cover" />
+                </a>
+            </div>
         </div>
     </div>
 </div>

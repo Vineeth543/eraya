@@ -1,5 +1,5 @@
 <div class="w-screen bg-[#F6FFFE]">
-    <div class="relative container mx-auto py-16">
+    <div class="relative container mx-auto px-10 py-16">
         <app-float-square [side]="'right'"></app-float-square>
 
         <div class="w-full flex gap-40 items-center justify-between">
@@ -53,7 +53,7 @@
 </div>
 
 <div class="w-screen bg-[#F8F8F8]">
-    <div class="relative container mx-auto py-16">
+    <div class="relative container mx-auto px-10 py-16">
         <app-float-square [type]="'secondary'"></app-float-square>
 
         <div class="w-2/3 rounded-3xl overflow-hidden">
@@ -84,57 +84,59 @@
 </app-service-list>
 
 <div class="w-screen bg-[#F8F8F8]">
-    <div class="container relative mx-auto flex flex-col gap-10 py-16">
+    <div class="container relative mx-auto px-10 py-16">
         <app-float-square [type]="'secondary'"></app-float-square>
 
-        <div class="flex justify-between items-center">
-            <span class="text-5xl font-semibold">Our Featured Projects</span>
+        <div class="w-full flex flex-col gap-10">
+            <div class="flex justify-between items-center">
+                <span class="text-5xl font-semibold">Our Featured Projects</span>
 
-            <app-button
-                [text]="'View More'"
-                [redirectUrl]="'/projects'">
-            </app-button>
-        </div>
-
-        <div class="w-full flex flex-col gap-6">
-            <div class="w-full flex gap-6">
-                <div class="w-3/4 h-[464px] rounded-3xl overflow-hidden">
-                    <img
-                        src="/images/living-room-4.jpg"
-                        alt="modern-room"
-                        class="w-full h-full object-cover shadow-lg hover:scale-105 transition-all duration-300" />
-                </div>
-
-                <div class="w-1/4 flex flex-col gap-6">
-                    <div class="h-[220px] rounded-3xl overflow-hidden">
-                        <img
-                            src="/images/bedroom-interior-2.jpg"
-                            alt="modern-room"
-                            class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
-                    </div>
-
-                    <div class="h-[220px] rounded-3xl overflow-hidden">
-                        <img
-                            src="/images/living-room-3.jpg"
-                            alt="modern-room"
-                            class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
-                    </div>
-                </div>
+                <app-button
+                    [text]="'View More'"
+                    [redirectUrl]="'/projects'">
+                </app-button>
             </div>
 
-            <div class="w-full flex gap-6">
-                <div class="w-1/2 h-[288px] rounded-3xl overflow-hidden">
-                    <img
-                        src="/images/living-room-2.jpg"
-                        alt="modern-room"
-                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+            <div class="w-full flex flex-col gap-6">
+                <div class="w-full flex gap-6">
+                    <div class="w-3/4 h-[464px] rounded-3xl overflow-hidden">
+                        <img
+                            src="/images/living-room-4.jpg"
+                            alt="modern-room"
+                            class="w-full h-full object-cover shadow-lg hover:scale-105 transition-all duration-300" />
+                    </div>
+
+                    <div class="w-1/4 flex flex-col gap-6">
+                        <div class="h-[220px] rounded-3xl overflow-hidden">
+                            <img
+                                src="/images/bedroom-interior-2.jpg"
+                                alt="modern-room"
+                                class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                        </div>
+
+                        <div class="h-[220px] rounded-3xl overflow-hidden">
+                            <img
+                                src="/images/living-room-3.jpg"
+                                alt="modern-room"
+                                class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                        </div>
+                    </div>
                 </div>
 
-                <div class="w-1/2 h-[288px] rounded-3xl overflow-hidden">
-                    <img
-                        src="/images/contemporary-office-1.jpg"
-                        alt="modern-room"
-                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                <div class="w-full flex gap-6">
+                    <div class="w-1/2 h-[288px] rounded-3xl overflow-hidden">
+                        <img
+                            src="/images/living-room-2.jpg"
+                            alt="modern-room"
+                            class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                    </div>
+
+                    <div class="w-1/2 h-[288px] rounded-3xl overflow-hidden">
+                        <img
+                            src="/images/contemporary-office-1.jpg"
+                            alt="modern-room"
+                            class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                    </div>
                 </div>
             </div>
         </div>
