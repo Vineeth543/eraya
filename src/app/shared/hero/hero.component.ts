@@ -46,8 +46,9 @@ export class HeroComponent {
             filter(event => event instanceof NavigationEnd),
             map((route: NavigationEnd) => {
                 this._currentTab = route.url;
+                this._isFormVisible = false;
                 this.elRef.nativeElement?.querySelector?.('video')?.load();
-                return this.routeAndBackgroundMap?.[route.url];
+                return this.routeAndBackgroundMap?.[this._currentTab];
             }),
         );
         this._isFormSubmissionSuccess = this.contactService.hasSentEmail();

@@ -3,16 +3,30 @@ import { SERVICES } from '../../data/services.data';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
 import { FloatingSquaresComponent } from '../floating-squares/floating-squares.component';
-import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { FloatingSquaresSide, FloatingSquaresType } from '../../interfaces/custom.interface';
+import {
+    AfterViewInit,
+    ChangeDetectionStrategy,
+    ChangeDetectorRef,
+    Component,
+    ElementRef,
+    HostListener,
+    Input,
+    ViewChild,
+} from '@angular/core';
 
 @Component({
     selector: 'app-service-list',
     imports: [CommonModule, FloatingSquaresComponent, ButtonComponent],
     templateUrl: './service-list.component.html',
     styleUrl: './service-list.component.less',
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ServiceListComponent implements AfterViewInit {
     @ViewChild('cardContainer', { static: true }) private cardContainer!: ElementRef;
+
+    @Input() public floatingSquaresSide: FloatingSquaresSide = 'left';
+    @Input() public floatingSquaresType: FloatingSquaresType = 'primary';
 
     private readonly MAX_ROWS: number = 2;
     private readonly CARD_GAP: number = 28;
@@ -23,7 +37,7 @@ export class ServiceListComponent implements AfterViewInit {
     public moreServicesCount: number = 0;
     public cardContainerWidth: number = 0;
 
-    constructor(private readonly cdr: ChangeDetectorRef) {}
+    constructor(private cdr: ChangeDetectorRef) {}
 
     @HostListener('window:resize')
     public onWindowResize(): void {
@@ -52,5 +66,10 @@ export class ServiceListComponent implements AfterViewInit {
         this.visibleServices = this.services.slice(this.visibleServices.length, this.visibleServices.length + maxCards);
         this.moreServicesCount = this.services.length - this.visibleServices.length;
         this.cdr.detectChanges();
+    }
+
+    public _onViewAllClick(): void {
+        this.visibleServices = this.services;
+        this.moreServicesCount = 0;
     }
 }

@@ -1,50 +1,52 @@
 <div class="w-screen bg-[#F6FFFE]">
-    <div class="relative container mx-auto flex gap-40 items-center justify-between py-16">
+    <div class="relative container mx-auto py-16">
         <app-float-square [side]="'right'"></app-float-square>
 
-        <div class="w-1/2 flex flex-col gap-10">
-            <span class="w-3/4 text-5xl font-semibold">Creative Solutions by Professional</span>
+        <div class="w-full flex gap-40 items-center justify-between">
+            <div class="w-1/2 flex flex-col gap-10">
+                <span class="w-3/4 text-5xl font-semibold">Creative Solutions by Professional</span>
 
-            <p class="text-xl">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's standard dummy
-                text ever since the 1500s
-            </p>
+                <p class="text-xl">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's standard
+                    dummy text ever since the 1500s
+                </p>
 
-            <div class="flex gap-4 mt-10 justify-between">
-                <div class="flex flex-col gap-3 items-center">
-                    <span class="text-[#489188] text-5xl font-semibold">120</span>
-                    <span class="text-[#6D776C] text-xl">Happy Clients</span>
-                </div>
+                <div class="flex gap-4 mt-10 justify-between">
+                    <div class="flex flex-col gap-3 items-center">
+                        <span class="text-[#489188] text-5xl font-semibold">120</span>
+                        <span class="text-[#6D776C] text-xl">Happy Clients</span>
+                    </div>
 
-                <span class="border border-[#A7B1A9]"></span>
+                    <span class="border border-[#A7B1A9]"></span>
 
-                <div class="flex flex-col gap-3 items-center">
-                    <span class="text-[#489188] text-5xl font-semibold">20</span>
-                    <span class="text-[#6D776C] text-xl">Projects Completed</span>
-                </div>
+                    <div class="flex flex-col gap-3 items-center">
+                        <span class="text-[#489188] text-5xl font-semibold">20</span>
+                        <span class="text-[#6D776C] text-xl">Projects Completed</span>
+                    </div>
 
-                <span class="border border-[#A7B1A9]"></span>
+                    <span class="border border-[#A7B1A9]"></span>
 
-                <div class="flex flex-col gap-3 items-center">
-                    <span class="text-[#489188] text-5xl font-semibold">2</span>
-                    <span class="text-[#6D776C] text-xl">Awards Won</span>
+                    <div class="flex flex-col gap-3 items-center">
+                        <span class="text-[#489188] text-5xl font-semibold">2</span>
+                        <span class="text-[#6D776C] text-xl">Awards Won</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="w-1/2 flex gap-10 items-end">
-            <div class="w-1/2 rounded-3xl overflow-hidden">
-                <img
-                    src="/images/modern-room-1.png"
-                    alt="modern-room"
-                    class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
-            </div>
+            <div class="w-1/2 flex gap-10 items-end">
+                <div class="w-1/2 rounded-3xl overflow-hidden">
+                    <img
+                        src="/images/modern-room-1.png"
+                        alt="modern-room"
+                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                </div>
 
-            <div class="w-1/2 rounded-3xl overflow-hidden">
-                <img
-                    src="/images/living-room-1.png"
-                    alt="modern-room"
-                    class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                <div class="w-1/2 rounded-3xl overflow-hidden">
+                    <img
+                        src="/images/living-room-1.png"
+                        alt="modern-room"
+                        class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
+                </div>
             </div>
         </div>
     </div>
@@ -76,7 +78,10 @@
     </div>
 </div>
 
-<app-service-list></app-service-list>
+<app-service-list
+    [floatingSquaresSide]="'right'"
+    [floatingSquaresType]="'primary'">
+</app-service-list>
 
 <div class="w-screen bg-[#F8F8F8]">
     <div class="container relative mx-auto flex flex-col gap-10 py-16">
@@ -136,4 +141,8 @@
     </div>
 </div>
 
-<app-work-card [card]="_procedure"></app-work-card>
+<app-work-card
+    [card]="_procedure"
+    [floatingSquaresSide]="'right'"
+    [floatingSquaresType]="'secondary'">
+</app-work-card>

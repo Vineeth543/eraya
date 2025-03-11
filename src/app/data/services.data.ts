@@ -115,8 +115,8 @@ export const SERVICES_CARD: VideoCard[] = [
         leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
         rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
         backgroundColor: 'bg-[#F6FFFE]',
-        floatingSquaresSide: 'left',
-        floatingSquaresType: 'primary',
+        floatingSquaresSide: 'right',
+        floatingSquaresType: 'secondary',
     },
     {
         title: 'HOME DESIGN 3D 2D INTERIOR SERVICES',
@@ -131,7 +131,7 @@ export const SERVICES_CARD: VideoCard[] = [
         leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
         rightStrengths: [],
         backgroundColor: 'bg-[#F8F8F8]',
-        floatingSquaresSide: 'right',
+        floatingSquaresSide: 'left',
         floatingSquaresType: 'primary',
     },
     {
@@ -147,8 +147,8 @@ export const SERVICES_CARD: VideoCard[] = [
         leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
         rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
         backgroundColor: 'bg-[#F6FFFE]',
-        floatingSquaresSide: 'left',
-        floatingSquaresType: 'primary',
+        floatingSquaresSide: 'right',
+        floatingSquaresType: 'secondary',
     },
 ];
 
@@ -167,7 +167,7 @@ export const ABOUT_US_CARDS: VideoCard[] = [
         rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
         backgroundColor: 'bg-[#F6FFFE]',
         floatingSquaresSide: 'left',
-        floatingSquaresType: 'primary',
+        floatingSquaresType: 'secondary',
     },
     {
         title: 'WHY TO CHOOSE OUR HOME DESIGN INTERIOR SERVICES',
@@ -183,7 +183,7 @@ export const ABOUT_US_CARDS: VideoCard[] = [
         rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
         backgroundColor: '',
         floatingSquaresSide: 'right',
-        floatingSquaresType: 'primary',
+        floatingSquaresType: 'secondary',
     },
 ];
 
