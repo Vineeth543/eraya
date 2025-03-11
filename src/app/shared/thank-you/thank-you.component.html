@@ -1,0 +1,22 @@
+<div class="w-full h-full flex flex-col items-center justify-center gap-6 {{ customClass }}">
+    <div class="w-16 h-16 flex items-center justify-center rounded-full">
+        <img
+            src="{{ success ? '/icons/checked.png' : '/icons/cancel.png' }}"
+            alt="icon"
+            class="w-16 h-16 object-cover" />
+    </div>
+
+    <span class="text-2xl font-bold">
+        {{ success ? 'Thank you for your submission!' : 'Something went wrong!' }}
+    </span>
+
+    <span class="text-xl">
+        {{ success ? 'We will get back to you shortly.' : 'Please try again later.' }}
+    </span>
+
+    <app-button
+        class="w-fit"
+        [text]="success ? 'Submit Another Response' : 'Try Again'"
+        (click)="onConfirm.emit()">
+    </app-button>
+</div>

@@ -4,13 +4,15 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContactService } from '../../services/contact.service';
 import { ButtonComponent } from '../../shared/button/button.component';
+import { LoaderComponent } from '../../shared/loader/loader.component';
+import { ThankYouComponent } from '../../shared/thank-you/thank-you.component';
 import { FloatingSquaresComponent } from '../../shared/floating-squares/floating-squares.component';
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
     selector: 'app-contact-us',
     templateUrl: './contact-us.component.html',
-    imports: [CommonModule, FormsModule, ButtonComponent, FloatingSquaresComponent],
+    imports: [CommonModule, FormsModule, ButtonComponent, FloatingSquaresComponent, LoaderComponent, ThankYouComponent],
     styleUrl: './contact-us.component.less',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -34,7 +36,6 @@ export class ContactUsComponent {
     }
 
     private resetState(success: boolean, error: boolean): void {
-        this.contactService.setSentEmail();
         this._name = '';
         this._phone = '';
         this._email = '';

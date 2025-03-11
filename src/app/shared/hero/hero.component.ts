@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ContactService } from '../../services/contact.service';
 import { ButtonComponent } from '../button/button.component';
+import { LoaderComponent } from '../loader/loader.component';
+import { ThankYouComponent } from '../thank-you/thank-you.component';
 import { RouterVideos, Tabs } from '../../interfaces/routes.interface';
 import { ROUTER_VIDEOS, TABS } from '../../data/routes.data';
 import { Router, NavigationEnd } from '@angular/router';
@@ -12,7 +14,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef } fro
 
 @Component({
     selector: 'app-hero',
-    imports: [CommonModule, FormsModule, ButtonComponent],
+    imports: [CommonModule, FormsModule, ButtonComponent, LoaderComponent, ThankYouComponent],
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.less',
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -52,7 +54,6 @@ export class HeroComponent {
     }
 
     private resetState(visible: boolean, success: boolean, error: boolean): void {
-        this.contactService.setSentEmail();
         this._name = '';
         this._phone = '';
         this._email = '';
