@@ -8,9 +8,7 @@ import { LoaderComponent } from '../loader/loader.component';
 import { ThankYouComponent } from '../thank-you/thank-you.component';
 import { RouterVideos, Tabs } from '../../interfaces/routes.interface';
 import { ROUTER_VIDEOS, TABS } from '../../data/routes.data';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter, map, Observable } from 'rxjs';
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, Input, OnChanges } from '@angular/core';
 
 @Component({
     selector: 'app-hero',
@@ -19,19 +17,18 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef } fro
     styleUrl: './hero.component.less',
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeroComponent {
-    private readonly routeAndBackgroundMap: RouterVideos = ROUTER_VIDEOS;
+export class HeroComponent implements OnChanges {
+    @Input() public currentTab: string = '';
 
     public readonly _tabs: Tabs = TABS;
     public readonly _socials: Socials[] = SOCIALS;
+    public readonly _videoSource: RouterVideos = ROUTER_VIDEOS;
 
     public _name: string = '';
     public _phone: string = '';
     public _email: string = '';
     public _message: string = '';
     public _loading: boolean = false;
-    public _currentTab: string = '';
-    public _videoSource$: Observable<string> = new Observable<string>();
     public _isFormVisible: boolean = false;
     public _isFormSubmissionError: boolean = false;
     public _isFormSubmissionSuccess: boolean = false;
@@ -39,19 +36,14 @@ export class HeroComponent {
     constructor(
         private cdr: ChangeDetectorRef,
         private elRef: ElementRef,
-        private router: Router,
         private contactService: ContactService,
     ) {
-        this._videoSource$ = this.router.events.pipe(
-            filter(event => event instanceof NavigationEnd),
-            map((route: NavigationEnd) => {
-                this._currentTab = route.url;
-                this._isFormVisible = false;
-                this.elRef.nativeElement?.querySelector?.('video')?.load();
-                return this.routeAndBackgroundMap?.[this._currentTab];
-            }),
-        );
         this._isFormSubmissionSuccess = this.contactService.hasSentEmail();
+    }
+
+    public ngOnChanges(): void {
+        this._isFormVisible = false;
+        this.elRef.nativeElement?.querySelector?.('video')?.load();
     }
 
     private resetState(visible: boolean, success: boolean, error: boolean): void {

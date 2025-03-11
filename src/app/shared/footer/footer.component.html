@@ -1,6 +1,9 @@
-<div class="w-screen bg-black">
+<div class="w-screen bg-black overflow-hidden">
     <div class="container relative mx-auto flex flex-col gap-5 px-10 py-16 text-white">
-        <app-float-square class="relative -top-28"></app-float-square>
+        <app-float-square
+            *ngIf="currentTab !== '/contact'"
+            class="relative -top-28">
+        </app-float-square>
 
         <div class="flex flex-wrap lg:flex-nowrap gap-x-4 gap-y-16 lg:gap-4 justify-between">
             <div class="w-full sm:w-64 order-1 lg:order-none flex flex-col items-center lg:items-start gap-4">

@@ -9,6 +9,7 @@ export const ROUTES: Routes[] = [
 ];
 
 export const ROUTER_VIDEOS: RouterVideos = {
+    '': '/videos/modern-living-room.mp4',
     '/': '/videos/modern-living-room.mp4',
     '/home': '/videos/modern-living-room.mp4',
     '/about': '/videos/modern-living-room.mp4',

@@ -1,9 +1,9 @@
 <app-header></app-header>
 
-<app-hero></app-hero>
+<app-hero [currentTab]="_route"></app-hero>
 
 <div class="h-screen"></div>
 
 <router-outlet></router-outlet>
 
-<app-footer></app-footer>
+<app-footer [currentTab]="_route"></app-footer>

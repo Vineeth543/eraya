@@ -1,13 +1,13 @@
 <div class="absolute w-screen h-screen flex items-center justify-center">
     <div class="container flex items-center justify-end px-10">
-        <ng-container *ngIf="_tabs?.[_currentTab]; else homeTab">
-            <div class="w-1/2 flex flex-col gap-14 text-white">
-                <span class="text-7xl font-bold">{{ _tabs[_currentTab].title }}</span>
+        <ng-container *ngIf="_tabs?.[currentTab]; else homeTab">
+            <div class="w-full lg:w-1/2 flex flex-col gap-14 text-white">
+                <span class="text-6xl sm:text-7xl font-bold">{{ _tabs[currentTab].title }}</span>
 
-                <span class="text-xl">{{ _tabs[_currentTab].description }}</span>
+                <span class="text-lg sm:text-xl">{{ _tabs[currentTab].description }}</span>
             </div>
 
-            <div class="w-1/2 flex justify-end">
+            <div class="hidden lg:w-1/2 lg:flex justify-end">
                 <div class="w-fit flex flex-col gap-6 p-3 rounded-xl bg-[#4E4E4E] bg-opacity-80">
                     <a
                         *ngFor="let social of _socials"
@@ -26,7 +26,7 @@
 
         <ng-template #homeTab>
             <div
-                class="relative w-1/2 h-[500px] flex flex-col justify-between px-12 py-16 rounded-3xl border border-white bg-[#4E4E4E] bg-opacity-80 text-white">
+                class="relative w-full lg:w-3/5 2xl:w-1/2 h-[450px] sm:h-[500px] flex flex-col justify-between px-12 py-16 rounded-3xl border border-white bg-[#4E4E4E] bg-opacity-80 text-white">
                 <div class="absolute -top-8 -left-12 w-28">
                     <img
                         src="/icons/curves1.svg"
@@ -36,9 +36,11 @@
 
                 <ng-container *ngIf="!_isFormVisible && !_loading && !_isFormSubmissionSuccess && !_isFormSubmissionError">
                     <div class="w-full flex flex-col gap-6 overflow-hidden">
-                        <span class="text-7xl font-extrabold"> Design Your Space For Living </span>
+                        <span class="text-5xl sm:text-6xl md:text-7xl lg:text-6xl 2xl:text-7xl font-extrabold">
+                            Design Your Space For Living
+                        </span>
 
-                        <p class="text-2xl font-normal">
+                        <p class="text-xl md:text-2xl lg:text-xl xl:text-2xl font-normal">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
                             standard dummy text ever since the.
                         </p>
@@ -116,7 +118,7 @@
         muted
         autoplay>
         <source
-            [src]="_videoSource$ | async"
+            [src]="_videoSource[currentTab]"
             [type]="'video/mp4'" />
     </video>
 </div>
