@@ -18,10 +18,10 @@
                 {{ card.title }}
             </span>
 
-            <div class="flex flex-wrap gap-4 items-center justify-between">
+            <div class="flex flex-wrap gap-10 items-center justify-center 2xl:justify-between">
                 <div
                     *ngFor="let service of card.services"
-                    class="w-[454px] h-[326px] flex flex-col gap-8 items-start px-10 py-8 rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+                    class="w-[550px] xl:w-[454px] h-[326px] flex flex-col gap-8 justify-center items-center xl:items-start text-center xl:text-start px-10 py-8 rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
                     [ngClass]="{ 'bg-[#489188] text-white': service.theme === 'dark', 'bg-white ': service.theme === 'light' }">
                     <div
                         *ngIf="service?.icon; else serial"

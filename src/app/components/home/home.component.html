@@ -2,38 +2,38 @@
     <div class="relative container mx-auto px-10 py-16">
         <app-float-square [side]="'right'"></app-float-square>
 
-        <div class="w-full flex gap-40 items-center justify-between">
-            <div class="w-1/2 flex flex-col gap-10">
-                <span class="w-3/4 text-5xl font-semibold">Creative Solutions by Professional</span>
+        <div class="w-full flex flex-col lg:flex-row gap-20 lg:gap-5 xl:gap-10 2xl:gap-40 items-center justify-between">
+            <div class="w-full lg:w-1/2 flex flex-col gap-5 xl:gap-10 text-center lg:text-start">
+                <span class="w-full lg:w-3/4 text-4xl xl:text-5xl font-semibold">Creative Solutions by Professional</span>
 
-                <p class="text-xl">
+                <p class="text-lg xl:text-xl">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's standard
                     dummy text ever since the 1500s
                 </p>
 
-                <div class="flex gap-4 mt-10 justify-between">
-                    <div class="flex flex-col gap-3 items-center">
-                        <span class="text-[#489188] text-5xl font-semibold">120</span>
-                        <span class="text-[#6D776C] text-xl">Happy Clients</span>
+                <div class="w-full flex gap-4 mt-10 justify-between">
+                    <div class="flex flex-col gap-3 items-center text-center">
+                        <span class="text-[#489188] text-4xl xl:text-5xl font-semibold">120</span>
+                        <span class="text-[#6D776C] text-lg xl:text-xl">Happy Clients</span>
                     </div>
 
                     <span class="border border-[#A7B1A9]"></span>
 
-                    <div class="flex flex-col gap-3 items-center">
-                        <span class="text-[#489188] text-5xl font-semibold">20</span>
-                        <span class="text-[#6D776C] text-xl">Projects Completed</span>
+                    <div class="flex flex-col gap-3 items-center text-center">
+                        <span class="text-[#489188] text-4xl xl:text-5xl font-semibold">20</span>
+                        <span class="text-[#6D776C] text-lg xl:text-xl">Projects Completed</span>
                     </div>
 
                     <span class="border border-[#A7B1A9]"></span>
 
-                    <div class="flex flex-col gap-3 items-center">
-                        <span class="text-[#489188] text-5xl font-semibold">2</span>
-                        <span class="text-[#6D776C] text-xl">Awards Won</span>
+                    <div class="flex flex-col gap-3 items-center text-center">
+                        <span class="text-[#489188] text-4xl xl:text-5xl font-semibold">2</span>
+                        <span class="text-[#6D776C] text-lg xl:text-xl">Awards Won</span>
                     </div>
                 </div>
             </div>
 
-            <div class="w-1/2 flex gap-10 items-end">
+            <div class="w-full lg:w-1/2 flex gap-10 items-end">
                 <div class="w-1/2 rounded-3xl overflow-hidden">
                     <img
                         src="/images/modern-room-1.png"
@@ -56,21 +56,22 @@
     <div class="relative container mx-auto px-10 py-16">
         <app-float-square [type]="'secondary'"></app-float-square>
 
-        <div class="w-2/3 rounded-3xl overflow-hidden">
+        <div class="w-full lg:w-2/3 rounded-3xl overflow-hidden">
             <img
                 src="/images/kitchen-design-1.png"
                 alt="modern-room"
                 class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
         </div>
 
-        <div class="absolute right-0 top-1/4 w-1/2 flex flex-col gap-10 p-12 bg-white rounded-3xl">
+        <div
+            class="absolute right-[12.5%] lg:right-10 top-[35%] sm:top-[42%] md:top-[50%] lg:top-[18%] xl:top-[22%] 2xl:top-[25%] w-3/4 lg:w-1/2 flex flex-col gap-10 p-6 lg:p-12 text-center lg:text-start bg-white bg-opacity-70 rounded-3xl">
             <span
-                class="text-5xl font-semibold line-clamp-2"
+                class="text-3xl lg:text-4xl xl:text-5xl font-semibold line-clamp-2"
                 [title]="'Our interiors designed to last a lifetime'">
                 Our interiors designed to last a lifetime
             </span>
 
-            <p class="text-xl line-clamp-4">
+            <p class="text-lg xl:text-xl line-clamp-4">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
                 dummy text ever since the 1500sindustry. Lorem Ipsum has been the industry's standard dummy text ever since
             </p>
@@ -88,8 +89,8 @@
         <app-float-square [type]="'secondary'"></app-float-square>
 
         <div class="w-full flex flex-col gap-10">
-            <div class="flex justify-between items-center">
-                <span class="text-5xl font-semibold">Our Featured Projects</span>
+            <div class="flex flex-col md:flex-row gap-6 justify-between items-center">
+                <span class="text-4xl sm:text-5xl text-center font-semibold">Our Featured Projects</span>
 
                 <app-button
                     [text]="'View More'"
@@ -98,15 +99,15 @@
             </div>
 
             <div class="w-full flex flex-col gap-6">
-                <div class="w-full flex gap-6">
-                    <div class="w-3/4 h-[464px] rounded-3xl overflow-hidden">
+                <div class="w-full flex flex-col lg:flex-row gap-6">
+                    <div class="w-full lg:w-3/4 h-[464px] rounded-3xl overflow-hidden">
                         <img
                             src="/images/living-room-4.jpg"
                             alt="modern-room"
                             class="w-full h-full object-cover shadow-lg hover:scale-105 transition-all duration-300" />
                     </div>
 
-                    <div class="w-1/4 flex flex-col gap-6">
+                    <div class="w-full lg:w-1/4 flex flex-col gap-6">
                         <div class="h-[220px] rounded-3xl overflow-hidden">
                             <img
                                 src="/images/bedroom-interior-2.jpg"
@@ -123,15 +124,15 @@
                     </div>
                 </div>
 
-                <div class="w-full flex gap-6">
-                    <div class="w-1/2 h-[288px] rounded-3xl overflow-hidden">
+                <div class="w-full flex flex-col lg:flex-row gap-6">
+                    <div class="w-full lg:w-1/2 h-[288px] rounded-3xl overflow-hidden">
                         <img
                             src="/images/living-room-2.jpg"
                             alt="modern-room"
                             class="w-full h-full object-cover hover:scale-105 transition-all duration-300" />
                     </div>
 
-                    <div class="w-1/2 h-[288px] rounded-3xl overflow-hidden">
+                    <div class="w-full lg:w-1/2 h-[288px] rounded-3xl overflow-hidden">
                         <img
                             src="/images/contemporary-office-1.jpg"
                             alt="modern-room"
