@@ -6,11 +6,11 @@
         </app-float-square>
 
         <div
-            class="flex gap-12"
-            [ngClass]="{ 'flex-row-reverse': card.cardType === 'secondary' }">
+            class="w-full flex flex-col-reverse lg:flex-row gap-12 items-center"
+            [ngClass]="{ 'lg:flex-row-reverse': card.cardType === 'secondary' }">
             <div
                 *ngIf="_safeUrl; else image"
-                class="w-1/2 overflow-hidden rounded-3xl">
+                class="w-full lg:w-1/2 h-[400px] overflow-hidden rounded-3xl">
                 <iframe
                     class="w-full h-full"
                     [src]="_safeUrl"
@@ -23,7 +23,7 @@
             </div>
 
             <ng-template #image>
-                <div class="w-1/2 overflow-hidden rounded-3xl">
+                <div class="w-full lg:w-1/2 overflow-hidden rounded-3xl">
                     <img
                         src="{{ card.imageSrc }}"
                         alt="living-room"
@@ -31,22 +31,22 @@
                 </div>
             </ng-template>
 
-            <div class="w-1/2 flex flex-col gap-4 justify-between py-8">
+            <div class="w-full lg:w-1/2 flex flex-col gap-4 justify-between items-center lg:items-start text-center lg:text-start lg:py-8">
                 <span
                     *ngIf="card.header"
-                    class="text-lg text-[#757575] font-black uppercase">
+                    class="text-base xl:text-lg text-[#757575] font-black uppercase">
                     {{ card.header }}
                 </span>
 
                 <span
                     *ngIf="card.title"
-                    class="text-5xl font-black leading-[60px] uppercase">
+                    class="text-4xl xl:text-5xl font-black xl:leading-[60px] uppercase">
                     {{ card.title }}
                 </span>
 
                 <p
                     *ngIf="card.description"
-                    class="text-lg text-[#6E6E6E]">
+                    class="text-base xl:text-lg text-[#6E6E6E]">
                     {{ card.description }}
                 </p>
 
@@ -59,8 +59,8 @@
                         <div
                             *ngFor="let strength of card.leftStrengths"
                             class="flex gap-2 items-center">
-                            <span class="text-xl">✅</span>
-                            <span class="text-xl">{{ strength }}</span>
+                            <span class="text-base xl:text-xl">✅</span>
+                            <span class="text-base xl:text-xl">{{ strength }}</span>
                         </div>
                     </div>
 
@@ -70,8 +70,8 @@
                         <div
                             *ngFor="let strength of card.rightStrengths"
                             class="flex gap-2 items-center">
-                            <span class="text-xl">✅</span>
-                            <span class="text-xl">{{ strength }}</span>
+                            <span class="text-base xl:text-xl">✅</span>
+                            <span class="text-base xl:text-xl">{{ strength }}</span>
                         </div>
                     </div>
                 </div>

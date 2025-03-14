@@ -4,5 +4,5 @@ export const SOCIALS: Socials[] = [
     { title: 'Instagram', icon: 'instagram', url: 'https://www.instagram.com/' },
     { title: 'LinkedIn', icon: 'linkedin', url: 'https://www.linkedin.com/' },
     { title: 'Facebook', icon: 'facebook', url: 'https://www.facebook.com/' },
-    { title: 'Twitter', icon: 'twitter', url: 'https://x.com/' },
+    { title: 'X', icon: 'x', url: 'https://x.com/' },
 ];

@@ -5,7 +5,7 @@
             [type]="floatingSquaresType">
         </app-float-square>
 
-        <div class="w-full flex flex-col gap-8">
+        <div class="w-full flex flex-col gap-8 items-center 2xl:items-start text-center 2xl:text-start">
             <span
                 *ngIf="card.header"
                 class="text-lg text-[#757575] font-black uppercase">
@@ -14,14 +14,14 @@
 
             <span
                 *ngIf="card.title"
-                class="text-5xl font-black leading-[60px] uppercase {{ card.titleClass }}">
+                class="w-full text-5xl font-black leading-[60px] uppercase {{ card.titleClass }}">
                 {{ card.title }}
             </span>
 
             <div class="flex flex-wrap gap-10 items-center justify-center 2xl:justify-between">
                 <div
                     *ngFor="let service of card.services"
-                    class="w-[550px] xl:w-[454px] h-[326px] flex flex-col gap-8 justify-center items-center xl:items-start text-center xl:text-start px-10 py-8 rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+                    class="w-full sm:w-[550px] xl:w-[454px] h-[326px] flex flex-col gap-8 justify-center items-center xl:items-start text-center xl:text-start px-10 py-8 rounded-3xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl transition-all duration-300"
                     [ngClass]="{ 'bg-[#489188] text-white': service.theme === 'dark', 'bg-white ': service.theme === 'light' }">
                     <div
                         *ngIf="service?.icon; else serial"
