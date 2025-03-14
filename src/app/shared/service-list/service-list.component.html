@@ -8,6 +8,8 @@
             [type]="floatingSquaresType">
         </app-float-square>
 
+        <span class="block lg:hidden text-4xl text-center mb-6 font-semibold">Services provided by us</span>
+
         <div class="w-full flex items-center justify-center gap-7">
             <div
                 *ngIf="cardContainerWidth"
@@ -27,15 +29,18 @@
                 </div>
             </div>
 
-            <div class="min-w-[454px] max-w-[454px] flex flex-col gap-7">
-                <div class="w-full h-[326px] flex flex-col gap-7 px-10 py-8">
+            <div
+                *ngIf="services.length !== visibleServices.length"
+                class="min-w-[454px] max-w-[454px] flex flex-col gap-7">
+                <div class="w-full h-[326px] flex flex-col gap-7 justify-center px-10 py-8">
                     <span class="text-5xl font-semibold">Services provided by us</span>
 
                     <p class="text-xl text-[#1A2239]">We have been providing great floring solutions service.</p>
 
                     <app-button
-                        [text]="'View All'"
-                        (click)="_onViewAllClick()">
+                        *ngIf="isHome"
+                        [text]="'View More'"
+                        [redirectUrl]="'/services'">
                     </app-button>
                 </div>
 

@@ -25,6 +25,7 @@ import {
 export class ServiceListComponent implements AfterViewInit {
     @ViewChild('cardContainer', { static: true }) private cardContainer!: ElementRef;
 
+    @Input() public isHome: boolean = false;
     @Input() public floatingSquaresSide: FloatingSquaresSide = 'left';
     @Input() public floatingSquaresType: FloatingSquaresType = 'primary';
 
@@ -52,10 +53,15 @@ export class ServiceListComponent implements AfterViewInit {
         const containerWidth: number = this.cardContainer.nativeElement.offsetWidth;
         const cardsPerRow: number = Math.floor((containerWidth + this.CARD_GAP - this.CARD_WIDTH) / (this.CARD_WIDTH + this.CARD_GAP));
         const maxCards: number = cardsPerRow * this.MAX_ROWS;
-        this.visibleServices = this.services.slice(0, maxCards);
-        this.moreServicesCount = this.services.length - maxCards;
-        this.cardContainerWidth = cardsPerRow * (this.CARD_WIDTH + this.CARD_GAP) - this.CARD_GAP;
-        this.cardContainerWidth < 0 && (this.cardContainerWidth = 0);
+        if (maxCards <= 0) {
+            this.visibleServices = this.services;
+        } else {
+            this.visibleServices = this.services.slice(0, maxCards);
+            this.moreServicesCount = this.services.length - maxCards;
+            this.moreServicesCount > this.services.length && (this.moreServicesCount = this.services.length);
+            this.cardContainerWidth = cardsPerRow * (this.CARD_WIDTH + this.CARD_GAP) - this.CARD_GAP;
+        }
+        this.cardContainerWidth <= 0 && (this.cardContainerWidth = this.CARD_WIDTH);
         this.cdr.detectChanges();
     }
 
@@ -63,13 +69,14 @@ export class ServiceListComponent implements AfterViewInit {
         const containerWidth: number = this.cardContainer.nativeElement.offsetWidth;
         const cardsPerRow: number = Math.floor((containerWidth + this.CARD_GAP - this.CARD_WIDTH) / (this.CARD_WIDTH + this.CARD_GAP));
         const maxCards: number = cardsPerRow * this.MAX_ROWS;
-        this.visibleServices = this.services.slice(this.visibleServices.length, this.visibleServices.length + maxCards);
+        const lastVisibleIndex: number = this.services.indexOf(this.visibleServices[this.visibleServices.length - 1]);
+        if (lastVisibleIndex + maxCards >= this.services.length) {
+            this.visibleServices = this.services.slice(0, maxCards);
+        } else {
+            this.visibleServices = this.services.slice(lastVisibleIndex + 1, lastVisibleIndex + maxCards + 1);
+        }
         this.moreServicesCount = this.services.length - this.visibleServices.length;
+        this.moreServicesCount > this.services.length && (this.moreServicesCount = this.services.length);
         this.cdr.detectChanges();
-    }
-
-    public _onViewAllClick(): void {
-        this.visibleServices = this.services;
-        this.moreServicesCount = 0;
     }
 }
