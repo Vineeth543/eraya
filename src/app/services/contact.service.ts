@@ -1,11 +1,12 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 import { ContactData, ContactResponse } from '../interfaces/custom.interface';
 
 @Injectable({ providedIn: 'root' })
 export class ContactService {
-    private readonly EMAIL_ENDPOINT: string = 'http://localhost:3000/contact';
+    private readonly EMAIL_ENDPOINT: string = environment.apiBaseUrl;
     private readonly EMAIL_SENT_KEY: string = 'sentEmail';
     private readonly sessionStorage: Storage = sessionStorage;
 
