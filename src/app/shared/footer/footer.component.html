@@ -58,9 +58,10 @@
                         *ngFor="let image of _recentWorkImages"
                         class="w-16 h-16 flex items-center justify-center cursor-pointer rounded-md overflow-hidden">
                         <img
-                            src="{{ image }}"
-                            alt="recent-work"
-                            class="w-full h-full object-cover hover:scale-150 transition-all duration-300" />
+                            [src]="image"
+                            [alt]="'recent-work'"
+                            class="w-full h-full object-cover hover:scale-150 transition-all duration-300"
+                            [routerLink]="'/projects'" />
                     </div>
                 </div>
             </div>

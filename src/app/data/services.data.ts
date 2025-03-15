@@ -156,7 +156,7 @@ export const ABOUT_US_CARDS: VideoCard[] = [
     {
         title: 'WE ARE PERFECT TEAM FOR HOME INTERIOR DECORATION',
         header: 'Who We Are',
-        imageSrc: '/images/living-room-5.jpg',
+        imageSrc: '/images/living-room-5.png',
         cardType: 'primary',
         buttonUrl: '',
         buttonType: 'primary',
@@ -210,7 +210,7 @@ export const PROJECTS: Project[] = [
     },
     {
         title: 'FULL PACKAGE DECORATION',
-        image: '/images/living-room-5.jpg',
+        image: '/images/living-room-5.png',
         highlights: ['Frame Design', 'Color Selection', 'Furniture Design'],
     },
     {

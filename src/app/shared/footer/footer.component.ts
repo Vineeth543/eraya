@@ -1,6 +1,7 @@
 import { SOCIALS } from '../../data/socials.data';
 import { Socials } from '../../interfaces/socials.interface';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { FOOTER_IMAGES } from '../../data/footer.data';
 import { Component, Input } from '@angular/core';
 import { FloatingSquaresComponent } from '../floating-squares/floating-squares.component';
@@ -8,7 +9,7 @@ import { FloatingSquaresComponent } from '../floating-squares/floating-squares.c
 @Component({
     selector: 'app-footer',
     templateUrl: './footer.component.html',
-    imports: [CommonModule, FloatingSquaresComponent],
+    imports: [CommonModule, FloatingSquaresComponent, RouterModule],
     styleUrl: './footer.component.less',
 })
 export class FooterComponent {
