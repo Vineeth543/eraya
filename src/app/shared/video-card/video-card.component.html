@@ -25,8 +25,8 @@
             <ng-template #image>
                 <div class="w-full lg:w-1/2 overflow-hidden rounded-3xl">
                     <img
-                        src="{{ card.imageSrc }}"
-                        alt="living-room"
+                        [src]="card.imageSrc"
+                        [alt]="'living-room'"
                         class="w-full h-full hover:scale-105 transition-all duration-300" />
                 </div>
             </ng-template>

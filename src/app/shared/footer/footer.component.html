@@ -9,9 +9,10 @@
             <div class="w-full sm:w-64 order-1 lg:order-none flex flex-col items-center lg:items-start gap-4">
                 <div class="w-32 flex items-center justify-center">
                     <img
-                        src="/icons/logo.png"
-                        alt="logo"
-                        class="w-full h-full object-cover" />
+                        [src]="'icons/logo.png'"
+                        [alt]="'logo'"
+                        class="w-full h-full object-cover cursor-pointer hover:scale-125 transition-all duration-300 ease-in-out"
+                        [routerLink]="'/home'" />
                 </div>
 
                 <span class="text-center lg:text-start">Lorem Ipsum is simply dummy text of the printing and typesetting.</span>
@@ -87,8 +88,8 @@
                     [title]="social.title"
                     [target]="'_blank'">
                     <img
-                        src="/icons/{{ social.icon }}.svg"
-                        alt="{{ social.title }}"
+                        [src]="'icons/' + social.icon + '.svg'"
+                        [alt]="social.title"
                         class="w-full h-full object-cover" />
                 </a>
             </div>

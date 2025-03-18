@@ -19,8 +19,8 @@
                     *ngFor="let service of visibleServices"
                     class="w-[454px] h-[326px] flex flex-col gap-7 items-center px-10 py-8 bg-white rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl hover:bg-[#F6FFFE] hover:text-[#489188] transition-all duration-300">
                     <img
-                        src="/icons/{{ service.icon }}.svg"
-                        alt="{{ service.icon }}"
+                        [src]="'icons/' + service.icon + '.svg'"
+                        [alt]="service.icon"
                         class="w-16 h-16" />
 
                     <span class="text-3xl font-semibold truncate">{{ service.title }}</span>
@@ -52,8 +52,8 @@
 
                     <div class="absolute top-0 left-1/2 w-28">
                         <img
-                            src="/icons/curves2.svg"
-                            alt="curves"
+                            [src]="'icons/curves2.svg'"
+                            [alt]="'curves'"
                             class="w-full h-full object-cover" />
                     </div>
 
@@ -61,8 +61,8 @@
                         class="absolute top-2/3 left-3/4 w-16 cursor-pointer hover:scale-125 transition-all duration-200 ease-in-out"
                         (click)="_showMoreServices()">
                         <img
-                            src="/icons/right-arrow.svg"
-                            alt="arrow"
+                            [src]="'icons/right-arrow.svg'"
+                            [alt]="'arrow'"
                             class="w-full h-full object-cover" />
                     </div>
                 </div>

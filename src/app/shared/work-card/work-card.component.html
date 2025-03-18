@@ -27,8 +27,8 @@
                         *ngIf="service?.icon; else serial"
                         class="min-w-16 max-w-16 min-h-16 max-h-16 overflow-hidden">
                         <img
-                            src="/icons/{{ service.icon }}.svg"
-                            alt="{{ service.icon }}"
+                            [src]="'icons/' + service.icon + '.svg'"
+                            [alt]="service.icon"
                             class="w-full h-full" />
                     </div>
 

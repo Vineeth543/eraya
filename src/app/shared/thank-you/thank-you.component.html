@@ -1,8 +1,8 @@
 <div class="w-full h-full flex flex-col items-center justify-center gap-6 {{ customClass }}">
     <div class="w-16 h-16 flex items-center justify-center rounded-full">
         <img
-            src="{{ success ? '/icons/checked.png' : '/icons/cancel.png' }}"
-            alt="icon"
+            [src]="success ? 'icons/checked.png' : 'icons/cancel.png'"
+            [alt]="'icon'"
             class="w-16 h-16 object-cover" />
     </div>
 
