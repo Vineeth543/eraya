@@ -21,7 +21,8 @@
                     <img
                         [src]="'icons/' + service.icon + '.svg'"
                         [alt]="service.icon"
-                        class="w-16 h-16" />
+                        class="w-16 h-16"
+                        [loading]="'lazy'" />
 
                     <span class="text-3xl font-semibold truncate">{{ service.title }}</span>
 
@@ -54,7 +55,8 @@
                         <img
                             [src]="'icons/curves2.svg'"
                             [alt]="'curves'"
-                            class="w-full h-full object-cover" />
+                            class="w-full h-full object-cover"
+                            [loading]="'lazy'" />
                     </div>
 
                     <div
@@ -63,7 +65,8 @@
                         <img
                             [src]="'icons/right-arrow.svg'"
                             [alt]="'arrow'"
-                            class="w-full h-full object-cover" />
+                            class="w-full h-full object-cover"
+                            [loading]="'lazy'" />
                     </div>
                 </div>
             </div>

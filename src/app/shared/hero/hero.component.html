@@ -18,7 +18,8 @@
                         <img
                             [src]="'icons/' + social.icon + '.svg'"
                             [alt]="social.title"
-                            class="w-full h-full object-cover" />
+                            class="w-full h-full object-cover"
+                            [loading]="'lazy'" />
                     </a>
                 </div>
             </div>
@@ -31,7 +32,8 @@
                     <img
                         [src]="'icons/curves1.svg'"
                         [alt]="'curves'"
-                        class="w-full h-full object-cover" />
+                        class="w-full h-full object-cover"
+                        [loading]="'lazy'" />
                 </div>
 
                 <ng-container *ngIf="!_isFormVisible && !_loading && !_isFormSubmissionSuccess && !_isFormSubmissionError">

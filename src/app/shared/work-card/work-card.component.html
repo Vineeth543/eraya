@@ -29,7 +29,8 @@
                         <img
                             [src]="'icons/' + service.icon + '.svg'"
                             [alt]="service.icon"
-                            class="w-full h-full" />
+                            class="w-full h-full"
+                            [loading]="'lazy'" />
                     </div>
 
                     <ng-template #serial>
