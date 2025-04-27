@@ -116,7 +116,8 @@
         class="w-full h-full bg-cover bg-center bg-no-repeat object-cover"
         loop
         muted
-        autoplay>
+        autoplay
+        onloadedmetadata="this.muted=true">
         <source
             [src]="_videoSource[currentTab]"
             [type]="'video/mp4'" />
