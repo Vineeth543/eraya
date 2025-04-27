@@ -13,18 +13,18 @@
         <div class="w-full flex items-center justify-center gap-7">
             <div
                 *ngIf="cardContainerWidth"
-                class="flex flex-wrap gap-7"
+                class="flex flex-wrap gap-7 px-10 sm:px-0 service-list"
                 [style.width.px]="cardContainerWidth">
                 <div
                     *ngFor="let service of visibleServices"
-                    class="w-[454px] h-[326px] flex flex-col gap-7 items-center px-10 py-8 bg-white rounded-3xl shadow-lg hover:scale-105 hover:shadow-xl hover:bg-[#F6FFFE] hover:text-[#489188] transition-all duration-300">
+                    class="w-full sm:w-[454px] h-[326px] flex flex-col gap-7 items-center px-10 py-8 bg-white rounded-3xl shadow-lg overflow-hidden hover:scale-105 hover:shadow-xl hover:bg-[#F6FFFE] hover:text-[#489188] transition-all duration-300">
                     <img
                         [src]="'icons/' + service.icon + '.svg'"
                         [alt]="service.icon"
                         class="w-16 h-16"
                         [loading]="'lazy'" />
 
-                    <span class="text-3xl font-semibold truncate">{{ service.title }}</span>
+                    <span class="text-3xl font-semibold text-center">{{ service.title }}</span>
 
                     <p class="text-xl text-[#5C675A] text-center">{{ service.description }}</p>
                 </div>
