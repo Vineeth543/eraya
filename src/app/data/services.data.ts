@@ -3,44 +3,44 @@ import { Procedure, Service } from '../interfaces/services.interface';
 
 export const SERVICES: Service[] = [
     {
-        title: 'Home Interior',
+        title: 'Interior Design Consultation',
         icon: 'home',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        description: 'Tailored design guidance to understand your style, needs, and vision.',
     },
     {
-        title: 'Office Interior',
+        title: 'Concept Development',
         icon: 'office',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        description: 'Mood boards, material suggestions, and style themes crafted to set the tone for your space.',
     },
     {
-        title: 'Restaurant Interior',
+        title: '3D Drawings & Photorealistic Renders',
         icon: 'kitchen',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        description: 'Visualize your space with high-quality, lifelike renderings before execution.',
     },
     {
-        title: 'Architecture',
+        title: 'Custom Furniture & Decor Design',
         icon: 'architecture',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        description: 'Unique pieces designed specifically for your space and personality.',
     },
     {
-        title: 'Resort Interior',
+        title: 'Detailed Production Drawings',
         icon: 'home',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        description: 'Accurate, to-scale technical drawings for smooth and precise implementation.',
     },
     {
-        title: 'Hospital Interior',
+        title: 'Material & Finish Selection',
         icon: 'office',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        description: 'Expert curation of surfaces, colors, textures, and finishes that elevate your space.',
     },
     {
-        title: 'Institute Interior',
-        icon: 'kitchen',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-    },
-    {
-        title: 'Showroom Interior',
+        title: 'Engineering Support',
         icon: 'architecture',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+        description: 'Seamless integration of MEP (Mechanical, Electrical, and Plumbing) systems with the design.',
+    },
+    {
+        title: 'Styling & Final Touches',
+        icon: 'architecture',
+        description: 'Finishing your space with thoughtful styling, accessories, and décor that bring everything together.',
     },
 ];
 
@@ -51,25 +51,25 @@ export const WORK_PROCEDURE_1: Procedure = {
     backgroundColor: 'bg-[#F8F8F8]',
     services: [
         {
-            title: 'CLIENT DESIGN CONSULTATION',
+            title: 'DESIGN CONSULTATION',
             icon: 'consult',
             theme: 'light',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+                'At Eraya Interiors, our design consultation is the first step in understanding you—your style, your needs, and how you want to live or work in your space. It’s where creativity meets clarity',
         },
         {
-            title: 'PROTOTYPING HOME DESIGN',
+            title: 'PROTOTYPING & DESIGN',
             icon: 'pencil',
             theme: 'dark',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+                'We create a design concept that reflects your vision, including mood boards and material suggestions. This is where we prototype your ideas into a tangible design plan.',
         },
         {
-            title: 'PROCESSING TO DESIGN HOME',
+            title: 'DESIGN EXECUTION',
             icon: 'house',
             theme: 'light',
             description:
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
+                'From finishes and fabrics to lighting and accessories, we help you choose every detail. Meanwhile, we prepare precise production drawings for flawless execution.',
         },
     ],
 };
@@ -81,71 +81,74 @@ export const WORK_PROCEDURE_2: Procedure = {
     backgroundColor: 'bg-[#F6FFFE]',
     services: [
         {
-            title: 'Statement of the problem',
+            title: 'Consultation & Design Development',
             serial: '01',
             theme: 'light',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.',
+            description:
+                'We start with a detailed consultation to understand your needs and preferences. We then create a design concept that reflects your vision, including mood boards and material suggestions.',
         },
         {
-            title: 'Project presentation',
+            title: 'Material Selection & Technical Drawings',
             serial: '02',
             theme: 'dark',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.',
+            description:
+                'From finishes and fabrics to lighting and accessories, we help you choose every detail. Meanwhile, we prepare precise production drawings for flawless execution.',
         },
         {
-            title: 'Development of renderings',
+            title: 'Execution & Project Management',
             serial: '03',
             theme: 'light',
-            description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.',
+            description:
+                'Our skilled team handles the on-site work, coordinating all civil, electrical, and carpentry tasks while ensuring timelines, quality, and transparency. And add the final curated touches',
         },
     ],
 };
 
 export const SERVICES_CARD: VideoCard[] = [
     {
-        title: 'HOME DESIGN CONSULTATION SERVICES',
+        title: 'Tailor-Made Designs with a Personal Touch',
         header: 'Design Consultation',
-        videoUrl: 'https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP',
+        videoUrl: 'https://www.youtube.com/embed/u-cELSZ3iq8?si=C_uI8XrllozzBeB1&amp',
         cardType: 'primary',
         buttonUrl: '/contact',
         buttonType: 'primary',
         buttonLabel: 'Contact Us',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-        leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
-        rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
+            'We don’t do templates. Every project is custom designed to reflect your individuality, lifestyle, and taste. We believe in a collaborative process, where your input is invaluable.',
+        leftStrengths: ['Great Design', 'Attention to Detail', 'Quality Work'],
+        rightStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
         backgroundColor: 'bg-[#F6FFFE]',
         floatingSquaresSide: 'right',
         floatingSquaresType: 'secondary',
     },
     {
-        title: 'HOME DESIGN 3D 2D INTERIOR SERVICES',
-        header: 'Design Consultation',
-        videoUrl: 'https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP',
+        title: 'Visual Clarity with 3D Renders & Drawings',
+        header: 'PROTOTYPING & DESIGN',
+        videoUrl: 'https://www.youtube.com/embed/1v5hcZpOMUI?si=TDleaEVfqi_-pWD1&amp',
         cardType: 'secondary',
         buttonUrl: '/contact',
         buttonType: 'primary',
         buttonLabel: 'Contact Us',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-        leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
+            "See your space before it's built. Our photorealistic 3D visuals ensure you know exactly what to expect. We also provide detailed production drawings for precise implementation.",
+        leftStrengths: ['Perfect Work', 'Great Design', 'Flexible Time'],
         rightStrengths: [],
         backgroundColor: 'bg-[#F8F8F8]',
         floatingSquaresSide: 'left',
         floatingSquaresType: 'primary',
     },
     {
-        title: 'ALL IN ONE HOME INTERIOR DESIGN',
-        header: 'Design Consultation',
-        videoUrl: 'https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP',
+        title: 'Quality Without Compromise',
+        header: 'DESIGN EXECUTION',
+        imageSrc: '/images/living-room-7.jpg',
         cardType: 'primary',
         buttonUrl: '/contact',
         buttonType: 'primary',
         buttonLabel: 'Contact Us',
         description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.',
-        leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
-        rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
+            'From materials to finishes, we obsess over the details to deliver quality that lasts. Our skilled team handles everything from civil work to final styling, ensuring a seamless experience.',
+        leftStrengths: ['Quality Work', 'Great Design', 'Attention to Detail'],
+        rightStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
         backgroundColor: 'bg-[#F6FFFE]',
         floatingSquaresSide: 'right',
         floatingSquaresType: 'secondary',
@@ -154,7 +157,7 @@ export const SERVICES_CARD: VideoCard[] = [
 
 export const ABOUT_US_CARDS: VideoCard[] = [
     {
-        title: 'WE ARE PERFECT TEAM FOR HOME INTERIOR DECORATION',
+        title: 'Designers of Space, Curators of Identity',
         header: 'Who We Are',
         imageSrc: '/images/living-room-5.png',
         cardType: 'primary',
@@ -162,25 +165,25 @@ export const ABOUT_US_CARDS: VideoCard[] = [
         buttonType: 'primary',
         buttonLabel: '',
         description:
-            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's standard dummy text ever since the 1500s",
+            'We are Eraya Interiors—a passionate team of designers, engineers, and creators driven by the belief that great design can transform lives.  We don’t believe in copy-paste design. Every space we create tells a unique story of yours.',
         leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
-        rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
+        rightStrengths: ['Quality Work', 'Great Design', 'Attention to Detail'],
         backgroundColor: 'bg-[#F6FFFE]',
         floatingSquaresSide: 'left',
         floatingSquaresType: 'secondary',
     },
     {
-        title: 'WHY TO CHOOSE OUR HOME DESIGN INTERIOR SERVICES',
+        title: 'WHY TO CHOOSE OUR INTERIOR DESIGN SERVICES',
         header: 'TRUST US NOW',
-        videoUrl: 'https://www.youtube.com/embed/NopJnAhO9w0?si=-E5IEA_a2Tq0ZYTP',
+        videoUrl: 'https://www.youtube.com/embed/ZQBwS1f_fDI',
         cardType: 'primary',
         buttonUrl: '',
         buttonType: 'primary',
         buttonLabel: '',
         description:
-            "Lorem ipsum dolor Lorem Ipsum is simply dummy text of the printing and typesetting industry. h Ipsum has been the industry's standard dummy text ever since the 1500s amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.",
-        leftStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
-        rightStrengths: ['Quality Work', 'Client Priority', 'Perfect Work'],
+            'Our strength lies in blending creative design thinking with technical expertise, offering everything from concept development and 3D visualization to turnkey execution and engineering support.',
+        leftStrengths: ['Quality Work', 'Great Design', 'Attention to Detail'],
+        rightStrengths: ['Flexible Time', 'Perfect Work', 'Client Priority'],
         backgroundColor: '',
         floatingSquaresSide: 'right',
         floatingSquaresType: 'secondary',

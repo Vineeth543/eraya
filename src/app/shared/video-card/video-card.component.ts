@@ -1,7 +1,7 @@
 import { VideoCard } from '../../interfaces/custom.interface';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../button/button.component';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { FloatingSquaresComponent } from '../floating-squares/floating-squares.component';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 

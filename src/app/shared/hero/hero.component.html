@@ -42,9 +42,10 @@
                             Design Your Space For Living
                         </span>
 
-                        <p class="text-xl md:text-2xl lg:text-xl xl:text-2xl font-normal">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                            standard dummy text ever since the.
+                        <p class="text-xl md:text-2xl lg:text-xl xl:text-2xl font-normal line-clamp-3 sm:line-clamp-4">
+                            We bring creativity and expertise to transform spaces into personalized masterpieces. Our process combines
+                            artistic flair with technical precision, delivering not just beautiful spaces, but ones that work flawlessly for
+                            everyday life.
                         </p>
                     </div>
 
@@ -113,12 +114,13 @@
     </div>
 </div>
 
-<div class="absolute -z-10 w-screen h-screen">
+<div class="fixed -z-10 w-screen h-screen">
     <video
         class="w-full h-full bg-cover bg-center bg-no-repeat object-cover"
         loop
         muted
         autoplay
+        preload="auto"
         onloadedmetadata="this.muted=true">
         <source
             [src]="_videoSource[currentTab]"

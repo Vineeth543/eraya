@@ -24,9 +24,9 @@
                         class="w-16 h-16"
                         [loading]="'lazy'" />
 
-                    <span class="text-3xl font-semibold text-center">{{ service.title }}</span>
+                    <span class="text-3xl font-semibold text-center line-clamp-2">{{ service.title }}</span>
 
-                    <p class="text-xl text-[#5C675A] text-center">{{ service.description }}</p>
+                    <p class="text-xl text-[#5C675A] text-center line-clamp-2">{{ service.description }}</p>
                 </div>
             </div>
 
@@ -36,7 +36,9 @@
                 <div class="w-full h-[326px] flex flex-col gap-7 justify-center px-10 py-8">
                     <span class="text-5xl font-semibold">Services provided by us</span>
 
-                    <p class="text-xl text-[#1A2239]">We have been providing great floring solutions service.</p>
+                    <p class="text-xl text-[#1A2239]">
+                        We have been providing great services to our clients. We have a team of experts who are always ready to help you.
+                    </p>
 
                     <app-button
                         *ngIf="isHome"

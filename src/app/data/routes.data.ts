@@ -22,21 +22,21 @@ export const TABS: Tabs = {
     '/about': {
         title: 'About Us',
         description:
-            "About Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.",
+            "At Eraya Interiors, we bring creativity and expertise to transform spaces into personalized masterpieces. As a design-focused interior firm, we specialize in custom, end-to-end interior solutions that reflect each client's unique taste and lifestyle.",
     },
     '/services': {
         title: 'Our Services',
         description:
-            "Services Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.",
+            'At Eraya Interiors, our process is designed to keep you involved, informed, and inspired every step of the way. Here’s how we transform ideas into stunning, functional spaces.',
     },
     '/projects': {
         title: 'Projects',
         description:
-            "Projects Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.",
+            'At Eraya Interiors, every project is a collaboration built on creativity, precision, and trust. Our process is designed to bring your vision to life while ensuring a smooth and stress-free experience from start to finish.',
     },
     '/contact': {
         title: 'Contact Us',
         description:
-            "Contact Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.",
+            "At Eraya Interiors, we believe that every great project starts with a conversation. Whether you have a question, need more information, or are ready to start your design journey, we're here to help.",
     },
 };
