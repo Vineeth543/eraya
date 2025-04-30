@@ -12,7 +12,7 @@
                     fresh perspective, ensuring our designs are as unique as the individuals we design for.
                 </p>
 
-                <div class="w-full flex gap-4 mt-10 justify-between">
+                <!-- <div class="w-full flex gap-4 mt-10 justify-between">
                     <div class="flex flex-col gap-3 items-center text-center">
                         <span class="text-[#489188] text-4xl xl:text-5xl font-semibold">120</span>
                         <span class="text-[#6D776C] text-lg xl:text-xl">Happy Clients</span>
@@ -31,7 +31,7 @@
                         <span class="text-[#489188] text-4xl xl:text-5xl font-semibold">2</span>
                         <span class="text-[#6D776C] text-lg xl:text-xl">Awards Won</span>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <div class="w-full lg:w-1/2 flex gap-10 items-end">
@@ -59,7 +59,13 @@
     <div class="relative container mx-auto px-10 py-16">
         <app-float-square [type]="'secondary'"></app-float-square>
 
-        <div class="w-full lg:w-2/3 rounded-3xl overflow-hidden">
+        <span
+            class="block md:hidden text-3xl text-center font-semibold mb-5"
+            [title]="'Our interiors designed to last a lifetime'">
+            Our interiors designed to last a lifetime
+        </span>
+
+        <div class="relative w-full xl:w-2/3 rounded-3xl overflow-hidden">
             <img
                 [src]="'images/kitchen-design-1.png'"
                 [alt]="'modern-room'"
@@ -68,14 +74,14 @@
         </div>
 
         <div
-            class="absolute right-[12.5%] lg:right-10 top-[35%] sm:top-[42%] md:top-[50%] lg:top-[18%] xl:top-[22%] 2xl:top-[25%] w-3/4 lg:w-1/2 flex flex-col gap-10 p-6 lg:p-12 text-center lg:text-start bg-white bg-opacity-70 rounded-3xl">
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 xl:-translate-x-0 xl:-translate-y-1 xl:right-10 xl:top-[22%] 2xl:top-[25%] w-auto xl:w-1/2 h-auto hidden md:flex flex-col gap-10 p-6 lg:p-12 text-center lg:text-start bg-white bg-opacity-20 md:bg-opacity-70 rounded-3xl">
             <span
-                class="text-3xl lg:text-4xl xl:text-5xl font-semibold line-clamp-2"
+                class="text-3xl lg:text-4xl xl:text-5xl font-semibold"
                 [title]="'Our interiors designed to last a lifetime'">
                 Our interiors designed to last a lifetime
             </span>
 
-            <p class="text-lg xl:text-xl line-clamp-4">
+            <p class="text-lg xl:text-xl">
                 From optimizing awkward spaces to integrating smart storage, we thrive on challenges. Whether it's transforming a compact
                 apartment into a spacious sanctuary or infusing personality into a blank canvas, our professionals turn limitations into
                 opportunities.

@@ -2,7 +2,7 @@ import { ROUTES } from '../../data/routes.data';
 import { Routes } from '../../interfaces/routes.interface';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -13,4 +13,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class HeaderComponent {
     public readonly _routes: Routes[] = ROUTES;
+
+    public isMobileMenuOpen: boolean = false;
+
+    @HostListener('document:click', ['$event'])
+    public closeMobileMenu(): void {
+        this.isMobileMenuOpen = false;
+    }
+
+    public toggleMobileMenu(): void {
+        this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    }
 }

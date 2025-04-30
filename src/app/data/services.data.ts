@@ -108,7 +108,7 @@ export const SERVICES_CARD: VideoCard[] = [
     {
         title: 'Tailor-Made Designs with a Personal Touch',
         header: 'Design Consultation',
-        videoUrl: 'https://www.youtube.com/embed/u-cELSZ3iq8?si=C_uI8XrllozzBeB1&amp',
+        imageSrc: '/images/living-room-8.jpg',
         cardType: 'primary',
         buttonUrl: '/contact',
         buttonType: 'primary',
@@ -124,7 +124,7 @@ export const SERVICES_CARD: VideoCard[] = [
     {
         title: 'Visual Clarity with 3D Renders & Drawings',
         header: 'PROTOTYPING & DESIGN',
-        videoUrl: 'https://www.youtube.com/embed/1v5hcZpOMUI?si=TDleaEVfqi_-pWD1&amp',
+        imageSrc: '/images/3d-render.jpg',
         cardType: 'secondary',
         buttonUrl: '/contact',
         buttonType: 'primary',
@@ -175,7 +175,7 @@ export const ABOUT_US_CARDS: VideoCard[] = [
     {
         title: 'WHY TO CHOOSE OUR INTERIOR DESIGN SERVICES',
         header: 'TRUST US NOW',
-        videoUrl: 'https://www.youtube.com/embed/ZQBwS1f_fDI',
+        imageSrc: '/images/living-room-9.jpg',
         cardType: 'primary',
         buttonUrl: '',
         buttonType: 'primary',
@@ -192,7 +192,7 @@ export const ABOUT_US_CARDS: VideoCard[] = [
 
 export const PROJECTS: Project[] = [
     {
-        title: 'PRE MADE HOME CONSULTATION',
+        title: 'PRE MADE INTERIOR CONSULTATION',
         image: '/images/living-room-1.png',
         highlights: ['Office Meeting', 'Working Time Call', 'Come to Place'],
     },
@@ -202,12 +202,12 @@ export const PROJECTS: Project[] = [
         highlights: ['Repair Design', 'Color Selection', 'Furniture Design'],
     },
     {
-        title: 'FULL HOUSE DECORATION',
+        title: 'FULL INTERIOR DECORATION',
         image: '/images/living-room-3.jpg',
         highlights: ['Color Selection', 'Furniture Design', 'Office Meeting'],
     },
     {
-        title: 'PRE BUILDING HOME DESIGN',
+        title: 'PRE BUILDING INTERIOR DESIGN',
         image: '/images/living-room-4.jpg',
         highlights: ['Office Meeting', 'Working Time Call', 'Come to Place'],
     },
